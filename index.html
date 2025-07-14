@@ -1,12 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My First Website</title>
+  <title>[Il Tuo Nome] | Creator Outdoor & Avventure</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <h1>Hello from the mountains!</h1>
-  <p>This is my very first homepage :)</p>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Hero Section -->
+  <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        Avventure Autentiche. Vita Reale. Contenuti che Ispirano.
+      </h1>
+      <p class="text-lg text-gray-300 mb-6">
+        Sono [Il Tuo Nome], creator outdoor tra sport, montagna e crescita personale. Vivi con me esperienze estreme, consigli utili e contenuti pensati per chi vuole spingersi oltre ogni limite.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#community" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-xl">Unisciti alla Community</a>
+        <a href="#attrezzatura" class="border border-white py-2 px-4 rounded-xl hover:bg-white hover:text-gray-900">Scopri l'Attrezzatura</a>
+      </div>
+    </div>
+    <div>
+      <img src="/hero-image.jpg" alt="Avventura in montagna" class="rounded-2xl shadow-2xl">
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-6" id="servizi">
+    <div class="bg-gray-800 p-6 rounded-2xl">
+      <h3 class="text-xl font-semibold mb-2">📸 Social Media</h3>
+      <p class="text-gray-400 mb-4">
+        Scopri i miei contenuti su Instagram, TikTok e YouTube: ispirazione, avventure e retroscena.
+      </p>
+      <div class="flex gap-3">
+        <a href="#"><img src="/icons/instagram.svg" alt="Instagram" class="w-5 h-5"></a>
+        <a href="#"><img src="/icons/youtube.svg" alt="YouTube" class="w-5 h-5"></a>
+      </div>
+    </div>
+
+    <div class="bg-gray-800 p-6 rounded-2xl" id="attrezzatura">
+      <h3 class="text-xl font-semibold mb-2">🎒 Attrezzatura Consigliata</h3>
+      <p class="text-gray-400 mb-4">
+        Trova l’attrezzatura che uso con link affiliati e consigli testati sul campo.
+      </p>
+      <a href="#" class="text-blue-400 underline">Vai al catalogo</a>
+    </div>
+
+    <div class="bg-gray-800 p-6 rounded-2xl">
+      <h3 class="text-xl font-semibold mb-2">🤝 Collabora con Me</h3>
+      <p class="text-gray-400 mb-4">
+        Sei un brand o un’azienda? Scopri i servizi che offro per le collaborazioni.
+      </p>
+      <a href="#" class="text-blue-400 underline">Scopri di più</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 text-gray-500">
+    <p>&copy; <span id="year"></span> [Il Tuo Nome]. Tutti i diritti riservati.</p>
+    <div class="flex justify-center gap-4 mt-4">
+      <a href="#"><img src="/icons/mail.svg" alt="Email" class="w-5 h-5"></a>
+      <a href="#"><img src="/icons/instagram.svg" alt="Instagram" class="w-5 h-5"></a>
+      <a href="#"><img src="/icons/youtube.svg" alt="YouTube" class="w-5 h-5"></a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
+
