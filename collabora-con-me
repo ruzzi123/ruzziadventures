@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collabora con Me | Ruzzi Outdoor</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <section class="max-w-4xl mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold mb-6">🤝 Collabora con Me</h1>
+    <p class="text-gray-300 mb-4">
+      Lavoro con brand che condividono la mia visione e il mio rispetto per l’ambiente, lo sport e la vita attiva. Sono disponibile per collaborazioni verticali legate a outdoor, travel, tech, abbigliamento tecnico, sport e cibo sano.
+    </p>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-4">📊 Dati Social (Giugno 2025)</h2>
+    <ul class="text-gray-300 space-y-2">
+      <li>• Instagram: +2.600 follower</li>
+      <li>• Engagement medio al mese: 15.000</li>
+      <li>• Visualizzazioni medie al mese: 450.000</li>
+      <li>• TikTok: 1.306 follower</li>
+      <li>• Visualizzazioni medie alla settimana: 35.000</li>
+      <li>• YouTube: 85 follower</li>
+      <li>• Visualizzazioni mese: 600</li>
+      <li>• Target: 18–34 anni, localizzato a Milano, Roma, Como, Lima e Torino</li>
+      <li>• Pubblico verticale: sport, outdoor, ispirazione</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-4">🌄 Valori e Stile</h2>
+    <ul class="text-gray-300 space-y-2">
+      <li>• Focus: autenticità, avventura, alpinismo, performance sportiva</li>
+      <li>• Mezzi di comunicazione: Instagram, TikTok, YouTube</li>
+      <li>• Contenuti: Instagram post, Instagram Reel, Storie Instagram, TikTok, Video YouTube e Shorts</li>
+      <li>• Valori: Natura, movimento e benessere, qualità e ispirazione, collaborazioni selettive</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-4">📦 Collaborazioni Offerte</h2>
+    <ul class="text-gray-300 space-y-2">
+      <li>• Sponsorizzazioni verticali (outdoor, travel, tech, abbigliamento tecnico, sport, cibo sano)</li>
+      <li>• Giveaway</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6 mb-2">💼 Prodotti Offerti</h3>
+    <ul class="text-gray-300 space-y-2">
+      <li>• Reel / TikTok / YouTube Shorts: da 150 €</li>
+      <li>• Post Instagram: prezzo su richiesta</li>
+      <li>• Pacchetto 1 Reel + 3 Storie: da 200 €</li>
+      <li>• Collaborazione mensile (media): da 450–600 €</li>
+      <li>• Giveaway dedicato: da 150 €</li>
+      <li>• Sponsor su video YouTube: da 50 €</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-4">📬 Contatti</h2>
+    <p class="text-gray-300 mb-4">Email: <a href="mailto:ruzzioutdoor@gmail.com" class="text-blue-400 underline">ruzzioutdoor@gmail.com</a></p>
+    <p class="text-gray-300 mb-10">Disponibile per collaborazioni in loco in Italia e Svizzera.</p>
+
+    <a href="mailto:ruzzioutdoor@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-xl text-lg">Contattami</a>
+  </section>
+</body>
+</html>
