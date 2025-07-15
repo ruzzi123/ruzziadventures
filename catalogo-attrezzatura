@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalogo Attrezzatura | [Il Tuo Nome]</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <style>
+    .hover-scale {
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+      filter: brightness(1.3);
+    }
+  </style>
+
+  <!-- Header -->
+  <header class="max-w-6xl mx-auto px-6 py-12 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">🎒 Catalogo Attrezzatura Consigliata</h1>
+    <p class="text-gray-300 text-lg">Qui trovi una selezione dell’attrezzatura che uso e consiglio, testata sul campo. Acquista direttamente tramite i link affiliati per supportare il mio lavoro.</p>
+  </header>
+
+  <!-- Product Grid -->
+  <section class="max-w-6xl mx-auto px-6 py-8 grid md:grid-cols-3 gap-8">
+    <!-- Prodotto 1 -->
+    <div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
+      <img src="/images/zaino.jpg" alt="Zaino da trekking" class="w-full h-48 object-cover rounded-xl mb-4">
+      <h2 class="text-xl font-semibold mb-2">Zaino 30L da trekking</h2>
+      <p class="text-gray-300 text-sm mb-4">Perfetto per escursioni giornaliere. Comodo, resistente, e con tasche ben distribuite.</p>
+      <a href="#" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
+    </div>
+
+    <!-- Altri prodotti qui... -->
+  </section>
+
+  <!-- Torna alla Home -->
+  <div class="text-center my-12">
+    <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-xl">⬅ Torna alla Home</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 text-gray-500">
+    <p>&copy; <span id="year"></span> [Il Tuo Nome]. Tutti i diritti riservati.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
