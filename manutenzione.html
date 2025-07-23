@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina in Manutenzione</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+  <div class="text-center px-4">
+    <h1 class="text-4xl font-bold mb-4">🚧 Pagina in Manutenzione</h1>
+    <p class="text-lg text-gray-300 mb-6">Stiamo lavorando per offrirti un'esperienza migliore. Torna presto a trovarci!</p>
+    <p class="text-sm text-gray-500">Ultimo aggiornamento: <span id="last-update"></span></p>
+  </div>
+
+  <script>
+    document.getElementById("last-update").textContent = new Date().toLocaleDateString("it-IT", {
+      day: "2-digit", month: "2-digit", year: "numeric"
+    });
+  </script>
+</body>
+</html>
