@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tommaso Ruzzi | Creator Outdoor & Avventure</title>
+  <meta name='impact-site-verification' value='5653a917-c74f-4115-bb7f-43078bbac8fe'>
+  <meta name="description" content="Alpinismo, avventura e crescita personale. Unisciti alla community di Tommaso Ruzzi: video, consigli e attrezzatura testata sul campo." />
+  <meta property="og:title" content="Tommaso Ruzzi | Creator Outdoor & Avventure" />
+  <meta property="og:description" content="Vivi con me esperienze estreme, consigli utili e contenuti per chi vuole spingersi oltre." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/images/hero-image.jpeg" />
+  <meta name="theme-color" content="#0B1220" />
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M6Q737K4L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-3M6Q737K4L');
+  </script>
+
+  <!-- Mailchimp -->
+  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/3695fc4b86da0afd11978f6ae/8b6e33e501fb60839b804a14d.js");</script>
+
+  <style>
+    :root{
+      --bg:#0b1220; /* profondo blu/nero */
+      --card:#111827; /* gray-900 */
+      --muted:#9CA3AF; /* gray-400 */
+      --brand:#2563eb; /* blue-600 */
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji"; background:radial-gradient(1200px 800px at 10% -10%, rgba(37,99,235,.25), transparent 60%), radial-gradient(900px 600px at 90% 10%, rgba(59,130,246,.15), transparent 60%), var(--bg)}
+
+    /* Glass cards */
+    .glass{background:rgba(17,24,39,.7); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.06)}
+
+    /* Fancy underline link */
+    .link{
+      position:relative; color:#93c5fd; font-weight:600; text-decoration:none
+    }
+    .link:after{content:""; position:absolute; inset:auto 0 -2px 0; height:2px; background:linear-gradient(90deg,#60a5fa,#93c5fd,#bfdbfe); transform:scaleX(0); transform-origin:left; transition:.35s ease}
+    .link:hover:after{transform:scaleX(1)}
+
+    /* Subtle card hover */
+    .card{
+      transition:transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s, border-color .45s;
+    }
+    .card:hover{transform: translateY(-6px) scale(1.01)}
+
+    /* CTA pulse */
+    .pulse{box-shadow:0 0 0 0 rgba(37,99,235,.7); animation:pulse 2.2s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,99,235,.6)}70%{box-shadow:0 0 0 22px rgba(37,99,235,0)}100%{box-shadow:0 0 0 0 rgba(37,99,235,0)}}
+
+    /* Reveal on scroll */
+    .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
+    .reveal.in{opacity:1; transform:none}
+
+    /* Video 16:9 */
+    .ratio{position:relative; width:100%}
+    .ratio:before{content:""; display:block; padding-top:56.25%}
+    .ratio>*{position:absolute; inset:0; width:100%; height:100%}
+
+    /* Floating dock (mobile) */
+    .dock{position:fixed; bottom:18px; left:50%; transform:translateX(-50%); z-index:50}
+    .dock-inner{display:flex; gap:.5rem; background:rgba(17,24,39,.8); border:1px solid rgba(255,255,255,.08); backdrop-filter: blur(14px); padding:.5rem; border-radius:9999px; box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .dock a{display:inline-flex; align-items:center; gap:.5rem; padding:.5rem .9rem; border-radius:9999px; font-weight:600; color:white; transition:transform .2s}
+    .dock a:active{transform:translateY(1px)}
+
+    /* Sticky header blur */
+    .sticky-nav{backdrop-filter: blur(12px); background:rgba(11,18,32,.6); border-bottom:1px solid rgba(255,255,255,.06)}
+
+    /* Gradient text */
+    .grad{background:linear-gradient(92deg,#93c5fd 0%,#60a5fa 30%,#3b82f6 60%,#1d4ed8 100%); -webkit-background-clip:text; background-clip:text; color:transparent}
+
+    /* Icon buttons */
+    .icon-btn{display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:12px; border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03); transition:transform .2s, background .2s}
+    .icon-btn:hover{transform:translateY(-2px)}
+
+    /* Accessibility focus */
+    :focus-visible{outline:2px dashed #93c5fd; outline-offset:3px}
+
+    /* Section divider */
+    .divider{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent)}
+  </style>
+</head>
+<body class="text-white">
+
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 sticky-nav">
+    <nav class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-3 group">
+        <img src="/icons/mountain.svg" alt="Logo" width="28" height="28" class="transform group-hover:rotate-6 transition" loading="lazy" />
+        <span class="font-extrabold tracking-tight">Tommaso <span class="grad">Ruzzi</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-2">
+        <a href="#servizi" class="px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-5">Servizi</a>
+        <a href="#youtube" class="px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-5">YouTube</a>
+        <a href="catalogo.html" class="px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-5">Attrezzatura</a>
+        <a href="collabora-con-me" class="px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-5">Collabora</a>
+        <a href="newsletter.html" class="ml-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-xl transition pulse">Newsletter</a>
+      </div>
+      <a href="#dock" class="md:hidden icon-btn" aria-label="Apri scorciatoie">
+        <img src="/icons/menu.svg" width="20" height="20" alt="Menu" loading="lazy" />
+      </a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main id="top" class="relative overflow-hidden">
+    <section class="max-w-7xl mx-auto px-6 pt-16 pb-8 grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-5">
+          <span class="grad">Alpinismo</span>. Avventura. Motivazione.
+        </h1>
+        <p class="text-lg text-gray-300 mb-7">Sono <strong>Tommaso Ruzzi</strong>, creator outdoor tra sport, montagna e crescita personale. Vivi con me esperienze estreme, consigli utili e contenuti pensati per chi vuole spingersi oltre.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://www.skool.com/ruzzis-summit-seekers-3795/about" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-semibold transition transform hover:-translate-y-0.5">Unisciti alla Community</a>
+          <a href="newsletter.html" class="bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-5 py-3 rounded-xl font-semibold transition">Newsletter</a>
+          <a href="catalogo.html" class="border border-white border-opacity-20 hover:border-opacity-40 px-5 py-3 rounded-xl font-semibold transition">Scopri l'Attrezzatura</a>
+        </div>
+        <div class="mt-6 flex items-center gap-4 text-sm text-gray-400">
+          <div class="flex -space-x-2">
+            <img src="/images/avatars/a1.jpg" alt="membro" class="w-8 h-8 rounded-full border border-white border-opacity-20" loading="lazy" />
+            <img src="/images/avatars/a2.jpg" alt="membro" class="w-8 h-8 rounded-full border border-white border-opacity-20" loading="lazy" />
+            <img src="/images/avatars/a3.jpg" alt="membro" class="w-8 h-8 rounded-full border border-white border-opacity-20" loading="lazy" />
+          </div>
+          <span>3k+ esploratori nella community</span>
+        </div>
+      </div>
+      <div class="relative reveal">
+        <div class="absolute -inset-3 rounded-2xl bg-gradient-to-tr from-blue-500/20 to-indigo-400/10 blur-2xl"></div>
+        <img src="/images/hero-image.jpeg" alt="Avventura in montagna" class="relative rounded-2xl shadow-2xl w-full object-cover" loading="eager" />
+      </div>
+    </section>
+
+    <div class="divider max-w-7xl mx-auto"></div>
+
+    <!-- Cards / Servizi -->
+    <section id="servizi" class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-6">
+      <!-- Social -->
+      <article class="glass card p-6 rounded-2xl">
+        <h3 class="text-xl font-semibold mb-2">📸 Social Media</h3>
+        <p class="text-gray-300 mb-5">Scopri i miei contenuti su Instagram, TikTok e YouTube: ispirazione, avventure e retroscena.</p>
+        <div class="flex gap-3">
+          <a class="icon-btn" href="https://www.instagram.com/tommaso.ruzzi" aria-label="Instagram"><img src="/icons/instagram.svg" alt="Instagram" width="20" height="20" loading="lazy" /></a>
+          <a class="icon-btn" href="https://www.tiktok.com/@tommaso.ruzzi" aria-label="TikTok"><img src="/icons/tiktok.svg" alt="TikTok" width="20" height="20" loading="lazy" /></a>
+          <a class="icon-btn" href="https://www.youtube.com/@Ruzzitommaso" aria-label="YouTube"><img src="/icons/youtube.svg" alt="YouTube" width="20" height="20" loading="lazy" /></a>
+        </div>
+      </article>
+
+      <!-- Gear -->
+      <article id="attrezzatura" class="glass card p-6 rounded-2xl">
+        <h3 class="text-xl font-semibold mb-2">🎒 Attrezzatura Consigliata</h3>
+        <p class="text-gray-300 mb-5">Trova l’attrezzatura che uso con link affiliati e consigli testati sul campo.</p>
+        <a href="catalogo.html" class="link">Vai al catalogo</a>
+      </article>
+
+      <!-- Collabo -->
+      <article class="glass card p-6 rounded-2xl">
+        <h3 class="text-xl font-semibold mb-2">🤝 Collabora con Me</h3>
+        <p class="text-gray-300 mb-5">Sei un brand o un’azienda? Scopri i servizi che offro per le collaborazioni.</p>
+        <a href="collabora-con-me" class="link">Scopri di più</a>
+      </article>
+    </section>
+
+    <!-- YouTube -->
+    <section id="youtube" class="max-w-7xl mx-auto px-6 py-10">
+      <h2 class="text-3xl font-extrabold text-center mb-8">🎥 Il Mio Ultimo Video YouTube</h2>
+      <div class="ratio max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl reveal">
+        <iframe src="https://www.youtube.com/embed/9Kgc5qzp5Wo?si=KdtjDA1DO3Yxz9ol" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="text-center mt-6">
+        <a href="https://www.youtube.com/@ruzzitommaso" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-5 rounded-xl">Guarda su YouTube</a>
+      </p>
+    </section>
+
+    <!-- CTA banner -->
+    <section class="max-w-7xl mx-auto px-6 pb-16">
+      <div class="glass rounded-2xl p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 reveal">
+        <div>
+          <h3 class="text-2xl font-bold">Pronto a spingerti oltre?</h3>
+          <p class="text-gray-300">Unisciti alla community e ricevi consigli esclusivi su allenamento, mindset e gear.</p>
+        </div>
+        <div class="flex gap-3">
+          <a href="https://www.skool.com/ruzzis-summit-seekers-3795/about" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-semibold">Unisciti ora</a>
+          <a href="newsletter.html" class="bg-white bg-opacity-10 hover:bg-opacity-20 px-5 py-3 rounded-xl font-semibold">Iscriviti alla Newsletter</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 text-gray-400">
+    <p>&copy; <span id="year"></span> <strong>Tommaso Ruzzi</strong>. Tutti i diritti riservati.</p>
+    <div class="flex justify-center gap-4 mt-4">
+      <a class="icon-btn" href="mailto:ruzzioutdoor@gmail.com" aria-label="Email"><img src="/icons/mail.svg" alt="Email" width="20" height="20" loading="lazy" /></a>
+      <a class="icon-btn" href="https://www.instagram.com/tommaso.ruzzi/" aria-label="Instagram"><img src="/icons/instagram.svg" alt="Instagram" width="20" height="20" loading="lazy" /></a>
+      <a class="icon-btn" href="https://www.youtube.com/@Ruzzitommaso" aria-label="YouTube"><img src="/icons/youtube.svg" alt="YouTube" width="20" height="20" loading="lazy" /></a>
+    </div>
+  </footer>
+
+  <!-- Floating Dock (a portata di mare) -->
+  <div id="dock" class="dock md:hidden" aria-label="Azioni principali">
+    <div class="dock-inner">
+      <a href="https://www.skool.com/ruzzis-summit-seekers-3795/about" class="bg-blue-600" aria-label="Community">Community</a>
+      <a href="newsletter.html" class="bg-white bg-opacity-10" aria-label="Newsletter">Newsletter</a>
+      <a href="catalogo.html" class="bg-white bg-opacity-10" aria-label="Catalogo">Gear</a>
+      <a href="collabora-con-me" class="bg-white bg-opacity-10" aria-label="Collabora">Collabora</a>
+    </div>
+  </div>
+
+  <!-- Utilities -->
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple reveal on scroll
+    const onScroll = () => {
+      document.querySelectorAll('.reveal').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.85) el.classList.add('in');
+      });
+    };
+    document.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('load', onScroll);
+
+    // reduce motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.pulse').forEach(el => el.classList.remove('pulse'));
+    }
+  </script>
+
+  <!-- JSON-LD Person Schema for basic SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tommaso Ruzzi",
+    "jobTitle": "Creator Outdoor",
+    "url": "https://tommasoruzzi.example/",
+    "sameAs": [
+      "https://www.instagram.com/tommaso.ruzzi",
+      "https://www.youtube.com/@Ruzzitommaso",
+      "https://www.tiktok.com/@tommaso.ruzzi"
+    ]
+  }
+  </script>
+</body>
+</html>
