@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Catalogo Attrezzatura | Tommaso Ruzzi</title>
-  
+  <title>Backpacks Catalog | Tommaso Ruzzi</title>
+
   <!-- SEO / Social basics -->
-  <meta name="description" content="Selezione di abbigliamento e attrezzatura outdoor testata sul campo da Tommaso Ruzzi. Acquista tramite link affiliati e supporta il progetto." />
-  <meta property="og:title" content="Catalogo Attrezzatura | Tommaso Ruzzi" />
-  <meta property="og:description" content="Abbigliamento e gear che uso e consiglio. Clicca e vai all'offerta." />
+  <meta name="description" content="Hand-picked backpacks for trekking, mountaineering, ski and ski touring by Tommaso Ruzzi. Click and shop via affiliate links to support the project." />
+  <meta property="og:title" content="Backpacks Catalog | Tommaso Ruzzi" />
+  <meta property="og:description" content="Packs I use and recommend. Find your setup and go straight to the offer." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/images/hero-image.jpeg" />
   <meta name="theme-color" content="#0B1220" />
@@ -30,9 +30,7 @@
   </script>
 
   <style>
-    :root{
-      --bg:#0b1220; --card:#111827; --muted:#9CA3AF; --brand:#2563eb;
-    }
+    :root{ --bg:#0b1220; --card:#111827; --muted:#9CA3AF; --brand:#2563eb; }
     html{scroll-behavior:smooth}
     body{font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; background:radial-gradient(1200px 800px at 10% -10%, rgba(37,99,235,.25), transparent 60%), radial-gradient(900px 600px at 90% 10%, rgba(59,130,246,.15), transparent 60%), var(--bg); color:white}
     .glass{background:rgba(17,24,39,.72); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.06)}
@@ -58,8 +56,8 @@
         <span class="font-extrabold tracking-tight">Tommaso <span class="grad">Ruzzi</span></span>
       </a>
       <div class="hidden md:flex items-center gap-2">
-        <a href="index.html#servizi" class="px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-5">Servizi</a>
-        <a href="catalogo.html" class="px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-5">Catalogo</a>
+        <a href="index.html#servizi" class="px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-5">Services</a>
+        <a href="catalogo.html" class="px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-5">Catalog</a>
         <a href="newsletter.html" class="ml-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-xl transition">Newsletter</a>
       </div>
     </nav>
@@ -67,8 +65,8 @@
 
   <!-- Page Hero -->
   <section class="max-w-7xl mx-auto px-6 pt-10 pb-4">
-    <h1 class="text-4xl md:text-5xl font-extrabold mb-3">🎒 Catalogo <span class="grad">Consigliato</span></h1>
-    <p class="text-gray-300 text-lg">Selezione di abbigliamento e gear che uso davvero. Clicca e vai all’offerta: i link sono affiliati (<span class="italic">senza costi extra</span>), ma mi aiutano a creare più contenuti.</p>
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-3">🎒 Backpack <span class="grad">Catalog</span></h1>
+    <p class="text-gray-300 text-lg">Curated packs I actually use for <strong>trekking/camping</strong>, <strong>mountaineering</strong>, <strong>ski</strong> and <strong>ski touring</strong>. Click through to shop. Links are affiliate (<em>no extra cost</em>) and help me keep creating.</p>
   </section>
 
   <!-- Sticky Filters / Search -->
@@ -76,16 +74,15 @@
     <div class="max-w-7xl mx-auto px-6 pb-3">
       <div class="glass rounded-2xl p-3 md:p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
         <div class="flex flex-wrap items-center gap-2">
-          <button data-filter="all" class="px-3 py-2 rounded-xl bg-white bg-opacity-10 hover:bg-opacity-20 font-semibold">Tutto</button>
-          <button data-filter="giacche" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Giacche</button>
-          <button data-filter="strati" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Strati</button>
-          <button data-filter="pantaloni" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Pantaloni</button>
-          <button data-filter="calze" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Calze</button>
-          <button data-filter="scarponi" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Scarponi</button>
+          <button data-filter="all" class="px-3 py-2 rounded-xl bg-white bg-opacity-10 hover:bg-opacity-20 font-semibold">All</button>
+          <button data-filter="trek" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Trekking/Camping</button>
+          <button data-filter="alpine" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Mountaineering</button>
+          <button data-filter="ski" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Ski</button>
+          <button data-filter="skialp" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Ski Alp</button>
         </div>
         <div class="flex items-center gap-2 w-full md:w-auto">
-          <input id="q" type="search" placeholder="Cerca prodotto..." class="w-full md:w-72 px-4 py-2 rounded-xl bg-white bg-opacity-10 placeholder-gray-400 focus:bg-opacity-15" />
-          <button id="clear" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Pulisci</button>
+          <input id="q" type="search" placeholder="Search backpack..." class="w-full md:w-72 px-4 py-2 rounded-xl bg-white bg-opacity-10 placeholder-gray-400 focus:bg-opacity-15" />
+          <button id="clear" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Clear</button>
         </div>
       </div>
     </div>
@@ -96,99 +93,66 @@
   <!-- Product Grid -->
   <section id="grid" class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
 
-    <!-- Product: Arc'Teryx Beta AR -->
-    <article class="glass card rounded-2xl overflow-hidden" data-category="giacche">
-      <div class="ratio"><img src="images/catalogo/abbigliamento/Arc'Teryx Beta AR.png" alt="Arc’Teryx Beta AR" loading="lazy"/></div>
+    <!-- Trekking/Camping -->
+    <article class="glass card rounded-2xl overflow-hidden" data-category="trek">
+      <div class="ratio"><img src="/images/catalogo/backpacks/deuter_futura_32.png" alt="Deuter Futura 32" loading="lazy"/></div>
       <div class="p-5">
         <div class="flex items-start justify-between gap-2">
-          <h2 class="text-lg font-semibold">Arc’Teryx Beta AR</h2>
+          <h2 class="text-lg font-semibold">Deuter Futura 32</h2>
           <span class="text-xs bg-blue-600 bg-opacity-20 text-blue-200 px-2 py-1 rounded-full">Top pick</span>
         </div>
-        <p class="text-sm text-gray-300 mt-2">Guscio GORE‑TEX pro, leggero e super resistente per meteo estremo.</p>
-        <a href="https://amzn.to/4f6WsY2" target="_blank" rel="nofollow sponsored" class="buy mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">Vai all’offerta</a>
+        <p class="text-sm text-gray-300 mt-2">Ventilated Aircomfort mesh back for cooler carry on long day hikes; organized storage with lower compartment.</p>
+        <a href="#" target="_blank" rel="nofollow sponsored" class="buy mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
       </div>
     </article>
 
-    <!-- Product: Arc’Teryx Cerium LT Hoody -->
-    <article class="glass card rounded-2xl overflow-hidden" data-category="strati">
-      <div class="ratio"><img src="images/catalogo/abbigliamento/Arc'Teryx Cerium LT Hooddy.png" alt="Arc’Teryx Cerium LT Hoody" loading="lazy"/></div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="trek">
+      <div class="ratio"><img src="/images/catalogo/backpacks/norrona_bitihorn_20.png" alt="Norrøna bitihorn 20" loading="lazy"/></div>
       <div class="p-5">
-        <h2 class="text-lg font-semibold">Arc’Teryx Cerium LT Hoody</h2>
-        <p class="text-sm text-gray-300 mt-2">Piumino leggerissimo e caldo, ideale come strato isolante.</p>
-        <a href="manutenzione.html" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">Vai all’offerta</a>
+        <h2 class="text-lg font-semibold">Norrøna bitihorn 20</h2>
+        <p class="text-sm text-gray-300 mt-2">Ultralight 20L daypack for fast hikes—hydration compatible, compression straps and big front mesh pocket.</p>
+        <a href="#" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
       </div>
     </article>
 
-    <!-- Product: Peak Performance Rider Zip Hood -->
-    <article class="glass card rounded-2xl overflow-hidden" data-category="strati">
-      <div class="ratio"><img src="images/catalogo/abbigliamento/Peak Performance rider zip hood 2.png" alt="Peak Performance Rider Zip Hood" loading="lazy"/></div>
+    <!-- Mountaineering -->
+    <article class="glass card rounded-2xl overflow-hidden" data-category="alpine">
+      <div class="ratio"><img src="/images/catalogo/backpacks/mammut_trion_38.png" alt="Mammut Trion 38" loading="lazy"/></div>
       <div class="p-5">
-        <h2 class="text-lg font-semibold">Peak Performance Rider Zip Hood</h2>
-        <p class="text-sm text-gray-300 mt-2">Felpa tecnica confortevole, perfetta post‑attività.</p>
-        <a href="https://www.peakperformance.com/gb/product/m-rider-zip-hood-g79942.html" target="_blank" rel="nofollow" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">Vai all’offerta</a>
+        <h2 class="text-lg font-semibold">Mammut Trion 38</h2>
+        <p class="text-sm text-gray-300 mt-2">Durable alpine pack with quick side access, ice‑axe holders and avalanche gear compartment; made with recycled fabrics.</p>
+        <a href="#" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
       </div>
     </article>
 
-    <!-- Product: Smartwool T-shirt -->
-    <article class="glass card rounded-2xl overflow-hidden" data-category="strati">
-      <div class="ratio"><img src="images/catalogo/abbigliamento/smartwool t-shirt.png" alt="Maglietta Lana Merinos Smartwool" loading="lazy"/></div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="alpine">
+      <div class="ratio"><img src="/images/catalogo/backpacks/ortovox_peak_45.png" alt="ORTOVOX PEAK 45" loading="lazy"/></div>
       <div class="p-5">
-        <h2 class="text-lg font-semibold">Maglietta Merinos (Smartwool)</h2>
-        <p class="text-sm text-gray-300 mt-2">Traspirante e anti‑odore per uscite lunghe in ogni stagione.</p>
-        <a href="manutenzione.html" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">Vai all’offerta</a>
+        <h2 class="text-lg font-semibold">ORTOVOX PEAK 45</h2>
+        <p class="text-sm text-gray-300 mt-2">High‑alpine workhorse: Swisswool 3D back system comfort, separate safety pocket, and full attachment options for rope, skis & helmet.</p>
+        <a href="#" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
       </div>
     </article>
 
-    <!-- Product: Gamma AR Pants -->
-    <article class="glass card rounded-2xl overflow-hidden" data-category="pantaloni">
-      <div class="ratio"><img src="images/catalogo/abbigliamento/arc'teryx gamma ar pants.png" alt="Arc'Teryx Gamma AR Pants" loading="lazy"/></div>
+    <!-- Ski Alp (Ski Touring) -->
+    <article class="glass card rounded-2xl overflow-hidden" data-category="skialp">
+      <div class="ratio"><img src="/images/catalogo/backpacks/mammut_tour_30 senza sfondo.png" alt="Mammut Tour 30 Removable Airbag 3.0" loading="lazy"/></div>
       <div class="p-5">
-        <h2 class="text-lg font-semibold">Arc'Teryx Gamma AR Pants</h2>
-        <p class="text-sm text-gray-300 mt-2">Softshell robusti e flessibili per escursioni alpine.</p>
-        <a href="https://amzn.to/3H4GwZD" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">Vai all’offerta</a>
+        <h2 class="text-lg font-semibold">Mammut Tour 30 Airbag 3.0</h2>
+        <p class="text-sm text-gray-300 mt-2">Avalanche‑ready touring pack with back‑panel access, avy‑tool pocket and ski/split carry for efficient transitions.</p>
+        <a href="#" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
       </div>
     </article>
 
-    <!-- Product: Smartwool Socks -->
-    <article class="glass card rounded-2xl overflow-hidden" data-category="calze">
-      <div class="ratio"><img src="images/catalogo/abbigliamento/smartwool socks.png" alt="Smartwool Calze" loading="lazy"/></div>
-      <div class="p-5">
-        <h2 class="text-lg font-semibold">Smartwool Calze</h2>
-        <p class="text-sm text-gray-300 mt-2">Comfort e controllo termico anche col freddo intenso.</p>
-        <a href="manutenzione.html" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">Vai all’offerta</a>
-      </div>
-    </article>
-
-    <!-- Product: Scarpa Ribelle HD -->
-    <article class="glass card rounded-2xl overflow-hidden" data-category="scarponi">
-      <div class="ratio"><img src="images/catalogo/abbigliamento/scarpa ribelle hd.png" alt="Scarpa Ribelle HD" loading="lazy"/></div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="skialp">
+      <div class="ratio"><img src="/images/catalogo/backpacks/otrovox_avabag_litric_tour_30.png" alt="ORTOVOX AVABAG LITRIC TOUR 30" loading="lazy"/></div>
       <div class="p-5">
         <div class="flex items-start justify-between gap-2">
-          <h2 class="text-lg font-semibold">Scarpa Ribelle HD</h2>
-          <span class="text-xs bg-green-600 bg-opacity-20 text-green-200 px-2 py-1 rounded-full">Usato da me</span>
+          <h2 class="text-lg font-semibold">ORTOVOX AVABAG LiTRIC TOUR 30</h2>
+          <span class="text-xs bg-green-600 bg-opacity-20 text-green-200 px-2 py-1 rounded-full">Ski‑touring</span>
         </div>
-        <p class="text-sm text-gray-300 mt-2">Scarponi leggeri, precisi e impermeabili per terreno tecnico.</p>
-        <a href="https://amzn.to/4o0T3OB" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">Vai all’offerta</a>
-      </div>
-    </article>
-
-    <!-- Product: Arc’Teryx Atom LT Hoody -->
-    <article class="glass card rounded-2xl overflow-hidden" data-category="strati">
-      <div class="ratio"><img src="images/catalogo/abbigliamento/Arc'teryx atom lt hoody.png" alt="Arc’Teryx Atom LT Hoody" loading="lazy"/></div>
-      <div class="p-5">
-        <h2 class="text-lg font-semibold">Arc’Teryx Atom LT Hoody</h2>
-        <p class="text-sm text-gray-300 mt-2">Strato intermedio versatile: caldo, traspirante e wind‑resistant.</p>
-        <a href="https://arcteryx.com/es/en/shop/mens/atom-hoody" target="_blank" rel="nofollow" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">Vai all’offerta</a>
-      </div>
-    </article>
-
-    <!-- Product: Arc’teryx Atom LT (variante) -->
-    <article class="glass card rounded-2xl overflow-hidden" data-category="strati">
-      <div class="ratio"><img src="images/catalogo/abbigliamento/arc'teryx atom lt.png" alt="Arc’teryx Atom LT" loading="lazy"/></div>
-      <div class="p-5">
-        <h2 class="text-lg font-semibold">Arc’teryx Atom LT</h2>
-        <p class="text-sm text-gray-300 mt-2">Leggero, compatto e termico: ideale per attività intense.</p>
-        <a href="manutenzione.html" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">Vai all’offerta</a>
+        <p class="text-sm text-gray-300 mt-2">Electronic LiTRIC airbag: simple recharge, LED charge display; min. two deployments and ~60h ON time—even down to −30°C.</p>
+        <a href="#" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
       </div>
     </article>
 
@@ -198,17 +162,17 @@
   <section class="max-w-7xl mx-auto px-6 pb-16">
     <div class="glass rounded-2xl p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div>
-        <h3 class="text-2xl font-bold">Vuoi altri consigli su cosa comprare?</h3>
-        <p class="text-gray-300">Iscriviti alla newsletter e ricevi liste aggiornate, offerte e setup stagionali.</p>
+        <h3 class="text-2xl font-bold">Want fresh gear drops?</h3>
+        <p class="text-gray-300">Join the newsletter for seasonal picks, deals and packing lists.</p>
       </div>
-      <a href="/newsletter.html" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-semibold">Iscriviti</a>
+      <a href="/newsletter.html" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-semibold">Subscribe</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="text-center py-10 text-gray-400">
-    <p>&copy; <span id="year"></span> <strong>Tommaso Ruzzi</strong>. Tutti i diritti riservati.</p>
-    <p class="text-xs text-gray-500 mt-2">Disclosure: come affiliato posso guadagnare una commissione idonea dagli acquisti effettuati tramite i link presenti.</p>
+    <p>&copy; <span id="year"></span> <strong>Tommaso Ruzzi</strong>. All rights reserved.</p>
+    <p class="text-xs text-gray-500 mt-2">Disclosure: as an affiliate I may earn qualifying commissions from purchases made through the links on this page.</p>
   </footer>
 
   <script>
