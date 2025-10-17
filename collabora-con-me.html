@@ -1,97 +1,153 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3M6Q737K4L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M6Q737K4L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3M6Q737K4L');
+  </script>
 
-  gtag('config', 'G-3M6Q737K4L');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Collabora con Me | Media Kit</title>
+  <title>Work with Me | Media Kit</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Inter font for consistent typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root{ --bg:#0b1220; }
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      color:#fff;
+      background:
+        radial-gradient(1200px 800px at 10% -10%, rgba(37,99,235,.25), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(59,130,246,.15), transparent 60%),
+        var(--bg);
+    }
+    .glass{background:rgba(17,24,39,.72); backdrop-filter: blur(12px); border:1px solid rgba(255,255,255,.08)}
+    .grad{background:linear-gradient(92deg,#93c5fd 0%,#60a5fa 30%,#3b82f6 60%,#1d4ed8 100%); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .card{transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s}
+    .card:hover{transform: translateY(-4px)}
+    .divider{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.14), transparent)}
+    .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
+    .reveal.in{opacity:1; transform:none}
+    :focus-visible{outline:2px dashed #93c5fd; outline-offset:3px}
+    a{text-decoration:none}
+    table td{border-bottom:1px solid rgba(255,255,255,.06)}
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-  <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-start">
-    <!-- Testo -->
-    <div>
-      <h1 class="text-4xl font-bold mb-6">Media Kit 2025</h1>
+<body class="text-white">
 
-      <h2 class="text-2xl font-semibold mb-2">Dati Social (Giugno 2025)</h2>
-      <ul class="text-gray-300 mb-6 list-disc list-inside">
-        <li>Instagram: +2.600 follower</li>
-        <li>Engagement medio al mese: 15.000</li>
-        <li>Visualizzazioni medie al mese: 450.000</li>
-        <li>TikTok: 1.306 follower</li>
-        <li>Visualizzazioni medie alla settimana: 35.000</li>
-        <li>YouTube: 85 follower</li>
-        <li>Visualizzazioni mese: 600</li>
-        <li>Target: 18–34 anni, localizzato a Milano, Roma, Como, Lima e Torino</li>
-        <li>Pubblico verticale: sport, outdoor, ispirazione</li>
+  <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-start">
+    <!-- Copy -->
+    <div class="reveal">
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+        <span class="grad">Media Kit 2025</span>
+      </h1>
+
+      <h2 class="text-2xl font-semibold mb-2">Social metrics (June 2025)</h2>
+      <ul class="text-gray-300 mb-6 list-disc list-inside space-y-1">
+        <li>Instagram: 2,600+ followers</li>
+        <li>Average monthly engagement: 15,000</li>
+        <li>Average monthly views: 450,000</li>
+        <li>TikTok: 1,306 followers</li>
+        <li>Average weekly views: 35,000</li>
+        <li>YouTube: 85 subscribers</li>
+        <li>Monthly views: 600</li>
+        <li>Audience: 18–34, mainly in Milan, Rome, Como, Lima and Turin</li>
+        <li>Verticals: sport, outdoor, inspiration</li>
       </ul>
 
-      <h2 class="text-2xl font-semibold mb-2">Valori e Stile</h2>
-      <ul class="text-gray-300 mb-6 list-disc list-inside">
-        <li>Focus: autenticità, avventura, alpinismo, performance sportiva</li>
-        <li>Mezzi di comunicazione: Instagram, TikTok, YouTube</li>
-        <li>Contenuti: Instagram post, Instagram Reel, Storie Instagram, TikTok, Video YouTube e Shorts</li>
-        <li>Valori: Natura, movimento e benessere, qualità e ispirazione, collaborazioni selettive</li>
+      <h2 class="text-2xl font-semibold mb-2">Values & style</h2>
+      <ul class="text-gray-300 mb-6 list-disc list-inside space-y-1">
+        <li>Focus: authenticity, adventure, alpinism, athletic performance</li>
+        <li>Primary channels: Instagram, TikTok, YouTube</li>
+        <li>Formats: IG posts, Reels, Stories; TikTok; YouTube Videos & Shorts</li>
+        <li>Core values: nature, movement & wellbeing, quality & inspiration, selective partnerships</li>
       </ul>
 
-      <h2 class="text-2xl font-semibold mb-2">Collaborazioni Offerte</h2>
+      <h2 class="text-2xl font-semibold mb-2">Collaboration options</h2>
       <p class="text-gray-300 mb-4">
-        Lavoro solo con brand che condividono la mia visione e il mio rispetto per l’ambiente, lo sport e la vita attiva.
+        I partner only with brands that share my vision and respect for the environment, sport, and an active life.
       </p>
-      <ul class="text-gray-300 mb-6 list-disc list-inside">
-        <li>Sponsorizzazioni verticali (outdoor, travel, tech, abbigliamento tecnico, sport, cibo sano)</li>
-        <li>Giveaway</li>
+      <ul class="text-gray-300 mb-6 list-disc list-inside space-y-1">
+        <li>Vertical sponsorships (outdoor, travel, tech, technical apparel, sport, healthy food)</li>
+        <li>Giveaways</li>
       </ul>
 
-      <h2 class="text-2xl font-semibold mb-2">Prodotti Offerti</h2>
-      <table class="text-gray-300 mb-6 w-full">
-        <tbody>
-          <tr><td class="pr-4 py-1">Reel / TikTok / YouTube Shorts</td><td>da 150 €</td></tr>
-          <tr><td class="pr-4 py-1">Post Instagram</td><td>Prezzo su richiesta</td></tr>
-          <tr><td class="pr-4 py-1">Pacchetto 1 Reel + 3 Storie</td><td>da 200 €</td></tr>
-          <tr><td class="pr-4 py-1">Collaborazione mensile (media)</td><td>da 450–600 €</td></tr>
-          <tr><td class="pr-4 py-1">Giveaway dedicato</td><td>da 150 €</td></tr>
-          <tr><td class="pr-4 py-1">Sponsor su video YouTube</td><td>da 50 €</td></tr>
-        </tbody>
-      </table>
+      <h2 class="text-2xl font-semibold mb-3">Packages & rates</h2>
+      <div class="glass card rounded-2xl p-4 md:p-5 mb-6">
+        <table class="text-gray-300 w-full">
+          <tbody>
+            <tr><td class="pr-4 py-2">Reel / TikTok / YouTube Shorts</td><td class="py-2 text-right">from €150</td></tr>
+            <tr><td class="pr-4 py-2">Instagram post</td><td class="py-2 text-right">price on request</td></tr>
+            <tr><td class="pr-4 py-2">Bundle: 1 Reel + 3 Stories</td><td class="py-2 text-right">from €200</td></tr>
+            <tr><td class="pr-4 py-2">Monthly collaboration (average)</td><td class="py-2 text-right">from €450–600</td></tr>
+            <tr><td class="pr-4 py-2">Dedicated giveaway</td><td class="py-2 text-right">from €150</td></tr>
+            <tr><td class="pr-4 py-2">YouTube video sponsor</td><td class="py-2 text-right">from €50</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-      <h2 class="text-2xl font-semibold mb-2">Contatti</h2>
+      <h2 class="text-2xl font-semibold mb-2">Contact</h2>
       <p class="text-gray-300">
-        Email: <a href="mailto:ruzzioutdoor@gmail.com" class="text-blue-400 underline">ruzzioutdoor@gmail.com</a><br>
-        Disponibile per collaborazioni in loco in Italia e Svizzera.
+        Email: <a href="mailto:ruzzioutdoor@gmail.com" class="text-blue-300 hover:text-blue-200">ruzzioutdoor@gmail.com</a><br>
+        Available for on-location collaborations in Italy and Switzerland.
       </p>
     </div>
 
-    <!-- Immagini -->
- <div class="space-y-6">
-      <img src="images/pizpalu.jpeg"  class="rounded-2xl shadow-xl w-full">
-      <img src="images/jbeltoubkal.jpeg"  class="rounded-2xl shadow-xl w-full">
- </div>
-  <div class="w-full flex justify-center mt-0 mb-8">
-  <a href="mailto:ruzzioutdoor@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-xl text-lg">
-    Contattami
-  </a>
-</div>
-     <!-- Torna alla Home -->
-  <div class="text-center my-12">
-    <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-xl">⬅ Torna alla Home</a>
+    <!-- Images -->
+    <div class="space-y-6 reveal">
+      <div class="relative">
+        <div class="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-blue-500/20 to-indigo-400/10 blur-2xl"></div>
+        <img src="images/pizpalu.jpeg" class="relative rounded-2xl shadow-2xl w-full" alt="">
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-blue-500/20 to-indigo-400/10 blur-2xl"></div>
+        <img src="images/jbeltoubkal.jpeg" class="relative rounded-2xl shadow-2xl w-full" alt="">
+      </div>
+    </div>
+  </section>
+
+  <div class="w-full flex justify-center mt-0 mb-8 reveal">
+    <a href="mailto:ruzzioutdoor@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-xl text-lg font-semibold">
+      Contact me
+    </a>
   </div>
 
-    <!-- Footer -->
-  <footer class="text-center py-10 text-gray-500">
-    <p>&copy; <span id="year"></span> Tommaso Ruzzi. Tutti i diritti riservati.</p>
+  <div class="divider max-w-7xl mx-auto"></div>
+
+  <!-- Back home -->
+  <div class="text-center my-12 reveal">
+    <a href="index.html" class="inline-block bg-white/10 hover:bg-white/20 text-white py-2 px-6 rounded-xl font-semibold">
+      ⬅ Back to Home
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 text-gray-400">
+    <p>&copy; <span id="year"></span> Tommaso Ruzzi. All rights reserved.</p>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // simple reveal on scroll
+    const onScroll = () => {
+      document.querySelectorAll('.reveal').forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.85) el.classList.add('in');
+      });
+    };
+    document.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('load', onScroll);
   </script>
 </body>
 </html>
