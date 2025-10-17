@@ -2,38 +2,52 @@
 <html lang="it">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3M6Q737K4L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3M6Q737K4L');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M6Q737K4L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-3M6Q737K4L');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catalogo Attrezzatura</title>
+  <title>Outdoor Gear Catalog</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{ --bg:#0b1220; }
+    html{scroll-behavior:smooth}
+    body{ font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; 
+      background:radial-gradient(1200px 800px at 10% -10%, rgba(37,99,235,.25), transparent 60%),
+                 radial-gradient(900px 600px at 90% 10%, rgba(59,130,246,.15), transparent 60%),
+                 var(--bg);
+    }
+    .glass{background:rgba(17,24,39,.72); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.06)}
+    .grad{background:linear-gradient(92deg,#93c5fd 0%,#60a5fa 30%,#3b82f6 60%,#1d4ed8 100%); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .card{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+    .card:hover{transform:translateY(-4px)}
+    :focus-visible{outline:2px dashed #93c5fd; outline-offset:3px}
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="text-white">
   <section class="max-w-4xl mx-auto px-6 py-16 text-center">
-    <h1 class="text-4xl font-bold mb-10">Catalogo Outdoor</h1>
-    <p class="text-gray-300 mb-10 text-lg">Scopri le mie attrezzature preferite suddivise per categoria. Clicca su una sezione per esplorare i prodotti consigliati!</p>
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Outdoor <span class="grad">Catalog</span></h1>
+    <p class="text-gray-300 mb-10 text-lg">Explore my favorite gear by category. Click a section to dive into the recommended picks.</p>
 
     <div class="grid md:grid-cols-2 gap-6">
-      <a href="abbigliamento.html" class="bg-gray-800 hover:bg-gray-700 py-8 px-6 rounded-2xl text-2xl font-semibold">👕 Abbigliamento</a>
-      <a hidden href="manutenzione.html" class="bg-gray-800 hover:bg-gray-700 py-8 px-6 rounded-2xl text-2xl font-semibold">🎒 Accessori</a>
-      <a href="attrezzatura-tecnica.html" class="bg-gray-800 hover:bg-gray-700 py-8 px-6 rounded-2xl text-2xl font-semibold">⛏️ Attrezzatura Tecnica</a>
-      <a hidden href="manutenzione.html" class="bg-gray-800 hover:bg-gray-700 py-8 px-6 rounded-2xl text-2xl font-semibold">🏕️ Campeggio</a>
+      <a href="abbigliamento.html" class="glass card py-8 px-6 rounded-2xl text-2xl font-semibold hover:bg-white hover:bg-opacity-5">👕 Clothing</a>
+      <a hidden href="manutenzione.html" class="glass card py-8 px-6 rounded-2xl text-2xl font-semibold hover:bg-white hover:bg-opacity-5">🎒 Accessories</a>
+      <a href="attrezzatura-tecnica.html" class="glass card py-8 px-6 rounded-2xl text-2xl font-semibold hover:bg-white hover:bg-opacity-5">⛏️ Technical Equipment</a>
+      <a hidden href="manutenzione.html" class="glass card py-8 px-6 rounded-2xl text-2xl font-semibold hover:bg-white hover:bg-opacity-5">🏕️ Camping</a>
     </div>
   </section>
 
-  <footer class="text-center py-10 text-gray-500">
-     <!-- Torna alla Home -->
-  <div class="text-center my-12">
-    <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-xl">⬅ Torna alla Home</a>
-  </div>
-
+  <footer class="text-center py-10 text-gray-400">
+    <div class="text-center my-12">
+      <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-xl">⬅ Back to Home</a>
+    </div>
   </footer>
 </body>
 </html>
