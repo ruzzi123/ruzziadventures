@@ -24,6 +24,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
+    /* Floating mobile dock */
+.dock{position:fixed; left:50%; bottom:18px; transform:translateX(-50%); z-index:60}
+.dock-inner{
+  display:flex; gap:.5rem; align-items:center;
+  background:rgba(17,24,39,.8); backdrop-filter:blur(14px);
+  border:1px solid rgba(255,255,255,.08);
+  padding:.5rem; border-radius:9999px; box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+.dock a{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.55rem .9rem; border-radius:9999px; font-weight:600; color:#fff;
+  border:1px solid rgba(255,255,255,.06); background:rgba(255,255,255,.06);
+  transition:transform .2s ease, background .2s ease;
+}
+.dock a:active{transform:translateY(1px)}
+/* Show only on mobile */
+@media (min-width:768px){ .dock{display:none} }
+
     :root{
       --bg:#0b1220;
     }
@@ -167,6 +185,14 @@
       document.querySelectorAll('.pulse').forEach(el => el.classList.remove('pulse'));
     }
   </script>
+<!-- Floating Dock (mobile) -->
+<div class="dock" aria-label="Quick actions">
+  <nav class="dock-inner" role="navigation">
+    <a href="https://www.skool.com/ruzzis-summit-seekers-3795/about" aria-label="Join the community">Community</a>
+    <a href="newsletter.html" aria-label="Subscribe to the newsletter">Newsletter</a>
+    <a href="catalogo.html" aria-label="Browse the catalogue">Catalogue</a>
+  </nav>
+</div>
 
 </body>
 </html>
