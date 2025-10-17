@@ -12,67 +12,94 @@
 
   gtag('config', 'G-3M6Q737K4L');
 </script>
-  <style>
-  .aspect-w-16 {
-    position: relative;
-    width: 100%;
-  }
-  .aspect-w-16::before {
-    content: "";
-    display: block;
-    padding-top: 56.25%; /* 16:9 aspect ratio */
-  }
-  .aspect-w-16 > iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title> Tommaso Ruzzi | Outdoor Creator & Adventures</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-900 text-white font-sans">
- <style>
-    .hover-scale {
-      transition: transform 0.3s ease, filter 0.3s ease;
+
+  <!-- Inter font for cleaner typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
     }
-    .hover-scale:hover {
-      transform: scale(1.2);
-      filter: brightness(1.3);
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      /* Gradient background in my style */
+      background:
+        radial-gradient(1200px 800px at 10% -10%, rgba(37,99,235,.25), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(59,130,246,.15), transparent 60%),
+        var(--bg);
+      color:#fff;
     }
+
+    /* Utilities from the proposed style */
+    .glass{background:rgba(17,24,39,.72); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.06)}
+    .grad{background:linear-gradient(92deg,#93c5fd 0%,#60a5fa 30%,#3b82f6 60%,#1d4ed8 100%); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .card{transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s}
+    .card:hover{transform: translateY(-4px)}
+    .pulse{box-shadow:0 0 0 0 rgba(37,99,235,.65); animation:pulse 2.2s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,99,235,.6)}70%{box-shadow:0 0 0 22px rgba(37,99,235,0)}100%{box-shadow:0 0 0 0 rgba(37,99,235,0)}}
+    .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
+    .reveal.in{opacity:1; transform:none}
+    :focus-visible{outline:2px dashed #93c5fd; outline-offset:3px}
+
+    /* 16:9 helper (kept, but refined) */
+    .aspect-w-16 { position: relative; width: 100%; }
+    .aspect-w-16::before { content: ""; display: block; padding-top: 56.25%; }
+    .aspect-w-16 > iframe { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+    /* Old hover-scale retained for icons */
+    .hover-scale { transition: transform 0.3s ease, filter 0.3s ease; }
+    .hover-scale:hover { transform: scale(1.12); filter: brightness(1.15); }
   </style>
+</head>
+
+<body>
 
   <!-- Hero Section -->
   <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
-    <div>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        Mountaineering. Adventure. Motivation.
+    <div class="reveal">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-5">
+        <span class="grad">Mountaineering</span>. Adventure. Motivation.
       </h1>
-      <p class="text-lg text-gray-300 mb-6">
+      <p class="text-lg text-gray-300 mb-7">
         I’m Tommaso Ruzzi, an outdoor creator across sport, mountains, and personal growth. Join me for bold experiences, practical tips, and content made for those who want to push further.
       </p>
-      <div class="flex flex-wrap gap-4">
-        <a href="https://www.skool.com/ruzzis-summit-seekers-3795/about" 	class="bg-blue-700 hover:bg-blue-900 text-white py-2 px-4 rounded-xl ease-in-out transition duration-300">Join the Community</a>
-    	<a href="newsletter.html" class="bg-blue-900 hover:bg-blue-700 text-white py-2 px-4 rounded-xl ease-in-out transition duration-300">Subscribe to the Newsletter</a>
-    	<a href="catalogo.html" class="hover:bg-white hover:text-gray-900 border border-white py-2 px-4 rounded-xl ease-in-out transition duration-300">Explore the Gear</a>
+      <div class="flex flex-wrap gap-3">
+        <!-- Primary conversion: Community -->
+        <a href="https://www.skool.com/ruzzis-summit-seekers-3795/about" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-semibold transition pulse">
+          Join the community
+        </a>
+        <!-- Secondary: Newsletter -->
+        <a href="newsletter.html" class="bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-5 py-3 rounded-xl font-semibold transition">
+          Subscribe to the newsletter
+        </a>
+        <!-- Tertiary: Catalogue -->
+        <a href="catalogo.html" class="border border-white border-opacity-25 hover:border-opacity-50 px-5 py-3 rounded-xl font-semibold transition">
+          Browse the catalogue
+        </a>
        </div>
     </div>
-    <div>
-      <img src="/images/hero-image.jpeg" alt="Avventura in montagna" class="rounded-2xl shadow-2xl">
+    <div class="reveal">
+      <div class="relative">
+        <div class="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-blue-500/20 to-indigo-400/10 blur-2xl"></div>
+        <img src="/images/hero-image.jpeg" alt="Avventura in montagna" class="relative rounded-2xl shadow-2xl w-full object-cover">
+      </div>
     </div>
   </section>
 
   <!-- Cards Section -->
   <section class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-6" id="servizi">
-    <div class="bg-gray-800 p-6 rounded-2xl">
-      <h3 class="text-xl font-semibold mb-2">📸 Social Media</h3>
-      <p class="text-gray-200 mb-4">
-        Follow my content on Instagram, TikTok and YouTube: inspiration, adventures, and behind the scenes.
+    <div class="glass card p-6 rounded-2xl reveal">
+      <h3 class="text-xl font-semibold mb-2">📸 Social media</h3>
+      <p class="text-gray-300 mb-5">
+        Follow along on Instagram, TikTok and YouTube for inspiration, adventures, and behind-the-scenes.
       </p>
       <div class="flex gap-4">
         <a href="https://www.instagram.com/tommaso.ruzzi" class="hover-scale"><img src="/icons/instagram.svg" alt="Instagram" class="w-8 h-8"></a>
@@ -81,36 +108,38 @@
       </div>
     </div>
 
-    <div class="bg-gray-800 p-6 rounded-2xl" id="attrezzatura">
-      <h3 class="text-xl font-semibold mb-2">🎒 Recommended Gear</h3>
-      <p class="text-gray-200 mb-4">
-        Discover the kit I use, with affiliate links and advice tested in the field.
+    <div class="glass card p-6 rounded-2xl reveal" id="attrezzatura">
+      <h3 class="text-xl font-semibold mb-2">🎒 Recommended gear</h3>
+      <p class="text-gray-300 mb-5">
+        Discover the kit I actually use — with affiliate links and field-tested advice.
       </p>
-     <a href="catalogo.html" class="text-blue-300 underline">Browse the catalogue</a> 
+      <a href="catalogo.html" class="text-blue-300 underline">Browse the catalogue</a>
     </div>
-    <div class="bg-gray-800 p-6 rounded-2xl">
-      <h3 class="text-xl font-semibold mb-2">🤝 Work with Me</h3>
-      <p class="text-gray-200 mb-4">
-        Are you a brand or company? Explore the services I offer for collaborations.
+
+    <div class="glass card p-6 rounded-2xl reveal">
+      <h3 class="text-xl font-semibold mb-2">🤝 Work with me</h3>
+      <p class="text-gray-300 mb-5">
+        Brand or company? Explore the services I offer for meaningful collaborations.
       </p>
       <a href="collabora-con-me" class="text-blue-300 underline">Find out more</a>
     </div>
   </section>
   
-   <!-- YouTube Section -->
+  <!-- YouTube Section -->
   <section class="max-w-6xl mx-auto px-6 py-12" id="youtube">
-    <h2 class="text-3xl font-bold text-center mb-8">🎥 My Latest YouTube Video</h2>
-    <div class="flex justify-center">
-      <div class="aspect-w-16 aspect-h-9 w-full max-w-4xl">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/D0iafF8Cm5I?si=5T2LKGmyFhVMuyDj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
+    <h2 class="text-3xl font-extrabold text-center mb-8 reveal">🎥 My latest YouTube video</h2>
+    <div class="flex justify-center reveal">
+      <div class="aspect-w-16 aspect-h-9 w-full max-w-4xl glass rounded-xl overflow-hidden shadow-2xl">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/D0iafF8Cm5I?si=5T2LKGmyFhVMuyDj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
-    <p class="text-center mt-4">
-      <a href="https://www.youtube.com/@ruzzitommaso" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl mt-4">Watch on YouTube</a>
+    <p class="text-center mt-6 reveal">
+      <a href="https://www.youtube.com/@ruzzitommaso" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-5 rounded-xl">Watch on YouTube</a>
     </p>
   </section>
   
-    <!-- Footer -->
-  <footer class="text-center py-10 text-gray-500">
+  <!-- Footer -->
+  <footer class="text-center py-10 text-gray-400">
     <p>&copy; <span id="year"></span> Tommaso Ruzzi. All rights reserved.</p>
     <div class="flex justify-center gap-4 mt-4">
       <a href="mailto:ruzzioutdoor@gmail.com"><img src="/icons/mail.svg" alt="Email" class="w-5 h-5"></a>
@@ -120,7 +149,23 @@
   </footer>
 
   <script>
+    // year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // reveal on scroll
+    const onScroll = () => {
+      document.querySelectorAll('.reveal').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.85) el.classList.add('in');
+      });
+    };
+    document.addEventListener('scroll', onScroll, {passive:true});
+    window.addEventListener('load', onScroll);
+
+    // Respect reduced motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.pulse').forEach(el => el.classList.remove('pulse'));
+    }
   </script>
 
 </body>
