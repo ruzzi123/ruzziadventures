@@ -1,171 +1,306 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Technical Gear Catalog | Tommaso Ruzzi</title>
+
+  <!-- SEO / Social basics -->
+  <meta name="description" content="Field-tested technical mountaineering gear hand-picked by Tommaso Ruzzi. Click through and shop via affiliate links to support the project." />
+  <meta property="og:title" content="Technical Gear Catalog | Tommaso Ruzzi" />
+  <meta property="og:description" content="Hardware, safety and ice tools I use and recommend. Find your setup and go straight to the offer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/images/hero-image.jpeg" />
+  <meta name="theme-color" content="#0B1220" />
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3M6Q737K4L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M6Q737K4L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-3M6Q737K4L');
+  </script>
 
-  gtag('config', 'G-3M6Q737K4L');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catalogo Attrezzatura | Tommaso Ruzzi</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-900 text-white font-sans">
   <style>
-    .hover-scale {
-      transition: transform 0.3s ease, filter 0.3s ease;
+    :root{ --bg:#0b1220; --card:#111827; --muted:#9CA3AF; --brand:#2563eb; }
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background:
+        radial-gradient(1200px 800px at 10% -10%, rgba(37,99,235,.25), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(59,130,246,.15), transparent 60%),
+        var(--bg);
+      color:white
     }
-    .hover-scale:hover {
-      transform: scale(1.05);
-      filter: brightness(1.3);
+    .glass{background:rgba(17,24,39,.72); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.06)}
+    .card{transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s}
+    .card:hover{transform: translateY(-4px)}
+    .buy{box-shadow:0 0 0 0 rgba(37,99,235,.7); animation:pulse 2.4s infinite}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,99,235,.6)}70%{box-shadow:0 0 0 18px rgba(37,99,235,0)}100%{box-shadow:0 0 0 0 rgba(37,99,235,0)}}
+    .ratio{position:relative;width:100%}
+    .ratio:before{content:"";display:block;padding-top:100%} /* 1:1 square */
+    .ratio>img{
+      position:absolute; inset:0; width:100%; height:100%;
+      object-fit:contain; object-position:center;
+      padding:8%; background:transparent;
     }
-    .square-img {
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-    }
+    .sticky-nav{backdrop-filter: blur(12px); background:rgba(11,18,32,.6); border-bottom:1px solid rgba(255,255,255,.06)}
+    .grad{background:linear-gradient(92deg,#93c5fd 0%,#60a5fa 30%,#3b82f6 60%,#1d4ed8 100%); -webkit-background-clip:text; background-clip:text; color:transparent}
+    .divider{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent)}
+    :focus-visible{outline:2px dashed #93c5fd; outline-offset:3px}
   </style>
-
-  <!-- Header -->
-  <header class="max-w-6xl mx-auto px-6 py-12 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">⛏️ Catalogo Attrezzatura Tecnica Consigliata</h1>
-    <p class="text-gray-300 text-lg">Qui trovi una selezione dell’attrezzatura che uso, testata sul campo. Acquista direttamente tramite i link affiliati per supportare il mio lavoro.
-    INFORMATEVI BENE PRIMA DI ACQUISTARE</p>
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 sticky-nav z-40">
+    <nav class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <span class="font-extrabold tracking-tight">Tommaso <span class="grad">Ruzzi</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-2">
+        <a href="index.html#servizi" class="px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-5">Services</a>
+        <a href="catalogo.html" class="px-3 py-2 rounded-lg hover:bg-white hover:bg-opacity-5">Catalog</a>
+        <a href="newsletter.html" class="ml-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-xl transition">Newsletter</a>
+      </div>
+    </nav>
   </header>
 
+  <!-- Page Hero -->
+  <section class="max-w-7xl mx-auto px-6 pt-10 pb-4">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-3">⛏️ Technical Gear <span class="grad">Catalog</span></h1>
+    <p class="text-gray-300 text-lg">
+      Hardware, safety and ice tools I actually use for mountaineering. Click through to shop. Links are affiliate (<em>no extra cost</em>) and help me keep creating.
+    </p>
+  </section>
+
+  <!-- Sticky Filters / Search -->
+  <section class="sticky top-14 z-30">
+    <div class="max-w-7xl mx-auto px-6 pb-3">
+      <div class="glass rounded-2xl p-3 md:p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <div class="flex flex-wrap items-center gap-2">
+          <button data-filter="all" class="px-3 py-2 rounded-xl bg-white bg-opacity-10 hover:bg-opacity-20 font-semibold">All</button>
+          <button data-filter="safety" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Safety</button>
+          <button data-filter="ice" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Ice & Tools</button>
+          <button data-filter="belay" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Belay & Ropes</button>
+          <button data-filter="hardware" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Carabiners & Hardware</button>
+        </div>
+        <div class="flex items-center gap-2 w-full md:w-auto">
+          <input id="q" type="search" placeholder="Search gear..." class="w-full md:w-72 px-4 py-2 rounded-xl bg-white bg-opacity-10 placeholder-gray-400 focus:bg-opacity-15" />
+          <button id="clear" class="px-3 py-2 rounded-xl bg-white bg-opacity-0 hover:bg-opacity-10">Clear</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider max-w-7xl mx-auto"></div>
+
   <!-- Product Grid -->
-  <section class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-2">
-    <!-- Ogni prodotto -->
-    <!-- Usa la classe square-img per le immagini -->
-    <!-- Esempio per uno -->
-    <div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/BlackDiamond_Helmet_Vision.png" alt="Akile Adze Ice Axe" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Casco Black Diamond</h2>
-  <a href="https://amzn.to/4oz74TA" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/Akila_Ice_Axe_Adze.png" alt="Akile Adze Ice Axe" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Akile Adze Ice Axe</h2>
-  <a href="https://amzn.to/4fHlCgc" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+  <section id="grid" class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/petzl sarken.png" alt="Petzl Sarken" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Petzl Sarken</h2>
-  <a href="https://amzn.to/45x82am" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <!-- Safety -->
+    <article class="glass card rounded-2xl overflow-hidden" data-category="safety">
+      <div class="ratio"><img src="images/catalogo/technical/BlackDiamond_Helmet_Vision.png" alt="Akile Adze Ice Axe" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Black Diamond Helmet</h2>
+        <a href="https://amzn.to/4oz74TA" target="_blank" rel="nofollow sponsored" class="buy mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/choucas-white-web_2.png" alt="Simond Rocky M" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Blue Ice Choucas</h2>
-  <a href="https://amzn.to/4mZnun1" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="ice">
+      <div class="ratio"><img src="images/catalogo/technical/Akila_Ice_Axe_Adze.png" alt="Akile Adze Ice Axe" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Akile Adze Ice Axe</h2>
+        <a href="https://amzn.to/4fHlCgc" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/petzl_kit_secours_crevasse.png" alt="Petzl Crevasse Rescue Kit" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Petzl Crevasse Rescue Kit</h2>
-  <a href="https://amzn.to/415jpoK" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="ice">
+      <div class="ratio"><img src="images/catalogo/technical/petzl sarken.png" alt="Petzl Sarken" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Petzl Sarken</h2>
+        <a href="https://amzn.to/45x82am" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/tibloc.png" alt="Petzl Tibloc" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Petzl Tibloc</h2>
-  <a href="https://amzn.to/3HrcwHE" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="hardware">
+      <div class="ratio"><img src="images/catalogo/technical/choucas-white-web_2.png" alt="Simond Rocky M" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Blue Ice Choucas</h2>
+        <a href="https://amzn.to/4mZnun1" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/micro traxion.png" alt="Petzl Micro Traxion" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Petzl Micro Traxion</h2>
-  <a href="https://amzn.to/4oyY6G8" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="safety">
+      <div class="ratio"><img src="images/catalogo/technical/petzl_kit_secours_crevasse.png" alt="Petzl Crevasse Rescue Kit" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Petzl Crevasse Rescue Kit</h2>
+        <a href="https://amzn.to/415jpoK" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/PetzlMOBILEPulley.png" alt="Petzl Pulley" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Petzl Pulley</h2>
-  <a href="https://amzn.to/46Pr9yR" class="text-blue-400 underline hover:text-blue-300">Acquista su Arc'Teryx.com</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="hardware">
+      <div class="ratio"><img src="images/catalogo/technical/tibloc.png" alt="Petzl Tibloc" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Petzl Tibloc</h2>
+        <a href="https://amzn.to/3HrcwHE" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/D017AA00-REVERSO_LowRes.png" alt="Petzl Reverso" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Petzl Reverso</h2>
-  <a href="https://amzn.to/3UZ239m" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="hardware">
+      <div class="ratio"><img src="images/catalogo/technical/micro traxion.png" alt="Petzl Micro Traxion" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Petzl Micro Traxion</h2>
+        <a href="https://amzn.to/4oyY6G8" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/petzl connect adjust.png" alt="Petzl Connect Adjust" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Petzl Connect Adjust</h2>
-  <a href="https://amzn.to/4lpwa4Q" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="hardware">
+      <div class="ratio"><img src="images/catalogo/technical/PetzlMOBILEPulley.png" alt="Petzl Pulley" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Petzl Pulley</h2>
+        <a href="https://amzn.to/46Pr9yR" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/R36AO-VOLTA-GUIDE_LowRes.png" alt="Petzl Volta Guide 9mm 50mt" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Petzl Volta Guide 9mm 50mt</h2>
-  <a href="https://amzn.to/45wee2e" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="belay">
+      <div class="ratio"><img src="images/catalogo/technical/D017AA00-REVERSO_LowRes.png" alt="Petzl Reverso" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Petzl Reverso</h2>
+        <a href="https://amzn.to/3UZ239m" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/petzl sl ok.png" alt="Petzl SL OK" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Petzl SL OK</h2>
-  <a href="https://amzn.to/3HsT6Cd" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="safety">
+      <div class="ratio"><img src="images/catalogo/technical/petzl connect adjust.png" alt="Petzl Connect Adjust" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Petzl Connect Adjust</h2>
+        <a href="https://amzn.to/4lpwa4Q" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/sm_d_twist_lock-simple-petzl-petz00368.png" alt="Petzl Sm'D Twist Lock" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Petzl Sm'D Twist Lock</h2>
-  <a href="https://amzn.to/3Uq3I7O" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="belay">
+      <div class="ratio"><img src="images/catalogo/technical/R36AO-VOLTA-GUIDE_LowRes.png" alt="Petzl Volta Guide 9mm 50mt" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Petzl Volta Guide 9mm 50m</h2>
+        <a href="https://amzn.to/45wee2e" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/BlackDiamond_Pearlock_Screwgate_Biner_Black.png" alt="Black Diamond Pearlock" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Black Diamond Pearlock</h2>
-  <a href="https://amzn.to/41E7e2a" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <!-- Carabiners & Hardware -->
+    <article class="glass card rounded-2xl overflow-hidden" data-category="hardware">
+      <div class="ratio"><img src="images/catalogo/technical/petzl sl ok.png" alt="Petzl SL OK" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Petzl SL OK</h2>
+        <a href="https://amzn.to/3HsT6Cd" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/simond rocky m.png" alt="Simond Rocky M" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Simond Rocky M</h2>
-  <a href="https://www.decathlon.it/tutti-gli-sport/arrampicata/moschettoni?pdt-highlight=305503&mc=8560142&utm_source=google&utm_medium=cpc&utm_campaign=it_t-perf_ct-pmax_n-b2c-ao-other-sports_ts-gen_f-cv_o-roas_&gad_source=1&gad_campaignid=19039335289&gclid=Cj0KCQjwzOvEBhDVARIsADHfJJRkGGTKMTPCaL2kPQNvTkQ_54oEEfHTHDNVzJ-ul10JX2-N3tu5OWIaAiOdEALw_wcB" class="text-blue-400 underline hover:text-blue-300">Acquista su Decathlon</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="hardware">
+      <div class="ratio"><img src="images/catalogo/technical/sm_d_twist_lock-simple-petzl-petz00368.png" alt="Petzl Sm'D Twist Lock" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Petzl Sm'D Twist Lock</h2>
+        <a href="https://amzn.to/3Uq3I7O" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/blackdiamond screwgates.png" alt="Black Diamond QuickDraws" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Black Diamond QuickDraws</h2>
-  <a href="mhttps://www.decathlon.it/tutti-gli-sport/arrampicata/rinvii?pdt-highlight=X8791154&mc=8791154&utm_source=google&utm_medium=cpc&utm_campaign=it_t-perf_ct-pmax_n-b2c-ao-other-sports_ts-gen_f-cv_o-roas_&gad_source=1&gad_campaignid=19039335289&gclid=Cj0KCQjwzOvEBhDVARIsADHfJJRXbz5GG-7UsMIN9QXJ3Z9G7yjzgp_8A7PKydJUiuosyKhd9o2QKHQaAr8tEALw_wcB" class="text-blue-400 underline hover:text-blue-300">Acquista su Decathlon</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="hardware">
+      <div class="ratio"><img src="images/catalogo/technical/BlackDiamond_Pearlock_Screwgate_Biner_Black.png" alt="Black Diamond Pearlock" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Black Diamond Pearlock</h2>
+        <a href="https://amzn.to/41E7e2a" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/technical/petzl st anneu.png" alt="Petzl St Anneu" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Petzl St Anneu</h2>
-  <a href="https://amzn.to/45uDx4L" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <article class="glass card rounded-2xl overflow-hidden" data-category="hardware">
+      <div class="ratio"><img src="images/catalogo/technical/simond rocky m.png" alt="Simond Rocky M" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Simond Rocky M</h2>
+        <a href="https://www.decathlon.it/tutti-gli-sport/arrampicata/moschettoni?pdt-highlight=305503&mc=8560142&utm_source=google&utm_medium=cpc&utm_campaign=it_t-perf_ct-pmax_n-b2c-ao-other-sports_ts-gen_f-cv_o-roas_&gad_source=1&gad_campaignid=19039335289&gclid=Cj0KCQjwzOvEBhDVARIsADHfJJRkGGTKMTPCaL2kPQNvTkQ_54oEEfHTHDNVzJ-ul10JX2-N3tu5OWIaAiOdEALw_wcB" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
+    <article class="glass card rounded-2xl overflow-hidden" data-category="hardware">
+      <div class="ratio"><img src="images/catalogo/technical/blackdiamond screwgates.png" alt="Black Diamond QuickDraws" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Black Diamond QuickDraws</h2>
+        <a href="mhttps://www.decathlon.it/tutti-gli-sport/arrampicata/rinvii?pdt-highlight=X8791154&mc=8791154&utm_source=google&utm_medium=cpc&utm_campaign=it_t-perf_ct-pmax_n-b2c-ao-other-sports_ts-gen_f-cv_o-roas_&gad_source=1&gad_campaignid=19039335289&gclid=Cj0KCQjwzOvEBhDVARIsADHfJJRXbz5GG-7UsMIN9QXJ3Z9G7yjzgp_8A7PKydJUiuosyKhd9o2QKHQaAr8tEALw_wcB" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
+
+    <article class="glass card rounded-2xl overflow-hidden" data-category="hardware">
+      <div class="ratio"><img src="images/catalogo/technical/petzl st anneu.png" alt="Petzl St Anneu" loading="lazy"/></div>
+      <div class="p-5">
+        <h2 class="text-lg font-semibold">Petzl St Anneu</h2>
+        <a href="https://amzn.to/45uDx4L" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+      </div>
+    </article>
 
   </section>
 
-  <!-- Pagina Precedente  -->
-  <div class="text-center my-12">
-    <a href="catalogo.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-xl">⬅ Pagina Precedente</a>
-  </div>
-
-  <!-- Torna alla Home -->
-  <div class="text-center my-12">
-    <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-xl">⬅ Torna alla Home</a>
-  </div>
+  <!-- Footer CTA -->
+  <section class="max-w-7xl mx-auto px-6 pb-16">
+    <div class="glass rounded-2xl p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div>
+        <h3 class="text-2xl font-bold">Want fresh gear drops?</h3>
+        <p class="text-gray-300">Join the newsletter for seasonal picks, deals and packing lists.</p>
+      </div>
+      <a href="/newsletter.html" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-semibold">Subscribe</a>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="text-center py-10 text-gray-500">
-    <p>&copy; <span id="year"></span> Tommaso Ruzzi. Tutti i diritti riservati.</p>
+  <footer class="text-center py-10 text-gray-400">
+    <p>&copy; <span id="year"></span> <strong>Tommaso Ruzzi</strong>. All rights reserved.</p>
+    <p class="text-xs text-gray-500 mt-2">Disclosure: as an affiliate I may earn qualifying commissions from purchases made through the links on this page.</p>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple filtering & search
+    const buttons = document.querySelectorAll('[data-filter]');
+    const grid = document.getElementById('grid');
+    const cards = Array.from(grid.children);
+    const q = document.getElementById('q');
+    const clear = document.getElementById('clear');
+
+    let current = 'all';
+    const apply = () => {
+      const term = q.value.toLowerCase().trim();
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const text = card.innerText.toLowerCase();
+        const matchCat = current === 'all' || cat === current;
+        const matchText = !term || text.includes(term);
+        card.style.display = (matchCat && matchText) ? '' : 'none';
+      });
+    };
+
+    buttons.forEach(b => b.addEventListener('click', () => {
+      current = b.getAttribute('data-filter');
+      buttons.forEach(x => x.classList.remove('bg-white','bg-opacity-10'));
+      b.classList.add('bg-white','bg-opacity-10');
+      apply();
+    }));
+    q.addEventListener('input', apply);
+    clear.addEventListener('click', () => { q.value=''; apply(); });
+
+    // Reduce motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.buy').forEach(el => el.classList.remove('buy'));
+    }
   </script>
 </body>
 </html>
