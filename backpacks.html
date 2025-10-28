@@ -42,8 +42,18 @@
     .buy{box-shadow:0 0 0 0 rgba(37,99,235,.7); animation:pulse 2.4s infinite}
     @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,99,235,.6)}70%{box-shadow:0 0 0 18px rgba(37,99,235,0)}100%{box-shadow:0 0 0 0 rgba(37,99,235,0)}}
     .ratio{position:relative;width:100%}
-    .ratio:before{content:"";display:block;padding-top:100%}
-    .ratio>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ratio:before{content:"";display:block;padding-top:100%} /* quadrato 1:1 */
+.ratio>img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;        /* mostra l'intera immagine */
+  object-position:center;    /* centrata nel riquadro */
+  padding:8%;                /* respiro intorno allo zaino (opzionale) */
+  background:transparent;    /* evita box bianco dietro PNG trasparenti */
+}
+
     .sticky-nav{backdrop-filter: blur(12px); background:rgba(11,18,32,.6); border-bottom:1px solid rgba(255,255,255,.06)}
     .grad{background:linear-gradient(92deg,#93c5fd 0%,#60a5fa 30%,#3b82f6 60%,#1d4ed8 100%); -webkit-background-clip:text; background-clip:text; color:transparent}
     .divider{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent)}
@@ -105,7 +115,7 @@
           <span class="text-xs bg-blue-600 bg-opacity-20 text-blue-200 px-2 py-1 rounded-full">Top pick</span>
         </div>
         <p class="text-sm text-gray-300 mt-2">Ventilated Aircomfort mesh back for cooler carry on long day hikes; organized storage with lower compartment.</p>
-        <a href="#" target="_blank" rel="nofollow sponsored" class="buy mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=22063&awinaffid=2451165&ued=https%3A%2F%2Fwww.bergzeit.it%2Fp%2Fdeuter-zaino-futura-32%2F5044822%2F%23itemId%3D5044822-006" target="_blank" rel="nofollow sponsored" class="buy mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
       </div>
     </article>
 
@@ -114,7 +124,7 @@
       <div class="p-5">
         <h2 class="text-lg font-semibold">Norrøna bitihorn 20</h2>
         <p class="text-sm text-gray-300 mt-2">Ultralight 20L daypack for fast hikes—hydration compatible, compression straps and big front mesh pocket.</p>
-        <a href="#" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+        <a href="https://www.bergfreunde.es/norroena-norroena-20l-pack-daypack/?aid=802782fca6cc045c473543e635019a50&pid=10004&dsc=false&bfgb=false&wt_mc=es.pla.google_es.19548938344..&wt_cc1=&gad_source=1&gad_campaignid=19548964744&gbraid=0AAAAADLAiDI7nbDW3X9AX4-HS5Jy-Bs40&gclid=CjwKCAjw04HIBhB8EiwA8jGNbeLG63P5sfNlreq7r_10kyux8O-v5IKuh94VkwiQko9LNjv72dg25BoCLdsQAvD_BwE" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
       </div>
     </article>
 
@@ -124,7 +134,7 @@
       <div class="p-5">
         <h2 class="text-lg font-semibold">Mammut Trion 38</h2>
         <p class="text-sm text-gray-300 mt-2">Durable alpine pack with quick side access, ice‑axe holders and avalanche gear compartment; made with recycled fabrics.</p>
-        <a href="#" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+        <a href="https://tidd.ly/3Lgljxv" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
       </div>
     </article>
 
@@ -133,7 +143,7 @@
       <div class="p-5">
         <h2 class="text-lg font-semibold">ORTOVOX PEAK 45</h2>
         <p class="text-sm text-gray-300 mt-2">High‑alpine workhorse: Swisswool 3D back system comfort, separate safety pocket, and full attachment options for rope, skis & helmet.</p>
-        <a href="#" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=22063&awinaffid=2451165&ued=https%3A%2F%2Fwww.bergzeit.it%2Fp%2Fortovox-zaino-peak-45%2F5053048%2F%23itemId%3D5053048-006" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
       </div>
     </article>
 
@@ -143,7 +153,7 @@
       <div class="p-5">
         <h2 class="text-lg font-semibold">Mammut Tour 30 Airbag 3.0</h2>
         <p class="text-sm text-gray-300 mt-2">Avalanche‑ready touring pack with back‑panel access, avy‑tool pocket and ski/split carry for efficient transitions.</p>
-        <a href="#" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=22063&awinaffid=2451165&ued=https%3A%2F%2Fwww.bergzeit.it%2Fp%2Fmammut-zaino-tour-30-removable-airbag-30%2F5055235%2F%23itemId%3D5055235-001" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
       </div>
     </article>
 
@@ -155,7 +165,7 @@
           <span class="text-xs bg-green-600 bg-opacity-20 text-green-200 px-2 py-1 rounded-full">Ski‑touring</span>
         </div>
         <p class="text-sm text-gray-300 mt-2">Electronic LiTRIC airbag: simple recharge, LED charge display; min. two deployments and ~60h ON time—even down to −30°C.</p>
-        <a href="#" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
+        <a href="https://www.awin1.com/cread.php?awinmid=22063&awinaffid=2451165&ued=https%3A%2F%2Fwww.bergzeit.it%2Fp%2Fortovox-zaino-da-valanga-avabag-litric-tour-40%2F5051318%2F%23itemId%3D5051318-001" target="_blank" rel="nofollow sponsored" class="mt-4 inline-flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl">View offer</a>
       </div>
     </article>
 
