@@ -18,7 +18,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Tommaso Ruzzi | Outdoor Creator & Adventures</title>
+  <title> Ruzzi Adventures | Outdoor Creator & Adventures</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
   <!-- Inter font for cleaner typography -->
@@ -115,11 +115,13 @@
     </div>
   </section>
 
-  <!-- Cards Section -->
-  <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8" id="servizi">
+<!-- Cards Section -->
+<section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8" id="servizi">
   <!-- Social Media -->
-  <a href="https://www.instagram.com/tommaso.ruzzi" target="_blank"
-     class="group glass card p-8 rounded-2xl reveal block hover:bg-white/5 transition transform hover:-translate-y-1 hover:shadow-2xl">
+  <div
+    class="group glass card p-8 rounded-2xl reveal hover:bg-white/5 transition transform hover:-translate-y-1 hover:shadow-2xl cursor-pointer"
+    data-href="https://www.instagram.com/ruzzi.adventures/"
+  >
     <div class="flex flex-col items-center text-center">
       <div class="w-14 h-14 rounded-full bg-blue-600 bg-opacity-20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
         <span class="text-2xl">📸</span>
@@ -128,13 +130,35 @@
       <p class="text-gray-300 mb-6">
         Follow me on Instagram, TikTok and YouTube for inspiration, adventures and behind-the-scenes stories.
       </p>
+
+      <!-- Icon links -->
       <div class="flex gap-4 justify-center">
-        <img src="/icons/instagram.svg" alt="Instagram" class="w-7 h-7 hover-scale">
-        <img src="/icons/tiktok.svg" alt="TikTok" class="w-7 h-7 hover-scale">
-        <img src="/icons/youtube.svg" alt="YouTube" class="w-7 h-7 hover-scale">
+        <a href="https://www.instagram.com/ruzzi.adventures/" target="_blank" rel="noopener nofollow" aria-label="Instagram">
+          <img src="/icons/instagram.svg" alt="Instagram" class="w-7 h-7 hover-scale">
+        </a>
+        <a href="https://www.tiktok.com/@ruzzi.adventures" target="_blank" rel="noopener nofollow" aria-label="TikTok">
+          <img src="/icons/tiktok.svg" alt="TikTok" class="w-7 h-7 hover-scale">
+        </a>
+        <a href="https://www.youtube.com/@ruzziadventures" target="_blank" rel="noopener nofollow" aria-label="YouTube">
+          <img src="/icons/youtube.svg" alt="YouTube" class="w-7 h-7 hover-scale">
+        </a>
       </div>
     </div>
-  </a>
+  </div>
+</section>
+
+<!-- Make the whole card clickable (but let icon links work normally) -->
+<script>
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('[data-href]');
+    if (!card) return;
+    // If the click was on a link inside the card, let that link handle it.
+    if (e.target.closest('a')) return;
+    const url = card.getAttribute('data-href');
+    window.open(url, '_blank', 'noopener');
+  });
+</script>
+
 
   <!-- Recommended Gear -->
   <a href="catalogo.html"
