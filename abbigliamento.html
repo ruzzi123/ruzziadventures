@@ -1,129 +1,134 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3M6Q737K4L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M6Q737K4L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3M6Q737K4L');
+  </script>
 
-  gtag('config', 'G-3M6Q737K4L');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catalogo Attrezzatura | Tommaso Ruzzi</title>
+  <title>Recommended Clothing Catalogue | Tommaso Ruzzi</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-900 text-white font-sans">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
   <style>
-    .hover-scale {
-      transition: transform 0.3s ease, filter 0.3s ease;
+    :root{ --bg:#0b1220; }
+    html{scroll-behaviour:smooth}
+    body{
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background:
+        radial-gradient(1200px 800px at 10% -10%, rgba(37,99,235,.25), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(59,130,246,.15), transparent 60%),
+        var(--bg);
+      color:#fff;
     }
-    .hover-scale:hover {
-      transform: scale(1.05);
-      filter: brightness(1.3);
-    }
-    .square-img {
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-    }
+    .glass{background:rgba(17,24,39,.72); backdrop-filter: blur(10px); border:1px solid rgba(255,255,255,.06);}
+    .grad{background:linear-gradient(92deg,#93c5fd 0%,#60a5fa 30%,#3b82f6 60%,#1d4ed8 100%); -webkit-background-clip:text; background-clip:text; color:transparent;}
+    .card{transition:transform .35s cubic-bezier(.2,.8,.2,1);}
+    .card:hover{transform: translateY(-4px);}
+    .square-img{aspect-ratio:1/1; object-fit:contain;}
   </style>
+</head>
+
+<body class="text-white">
 
   <!-- Header -->
-  <header class="max-w-6xl mx-auto px-6 py-12 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">🎒 Catalogo Abbigliamento Consigliato</h1>
-    <p class="text-gray-300 text-lg">Qui trovi una selezione dell’abbigliamento che uso e consiglio, testato sul campo. Acquista direttamente tramite i link affiliati per supportare il mio lavoro.</p>
+  <header class="max-w-6xl mx-auto px-6 py-16 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">🎒 <span class="grad">Recommended Clothing</span> Catalogue</h1>
+    <p class="text-gray-300 text-lg">Here you’ll find a curated selection of the clothing I use and recommend, field-tested and reliable. Shop through affiliate links to support my work.</p>
   </header>
 
   <!-- Product Grid -->
-  <section class="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-2">
-    <!-- Ogni prodotto -->
-    <!-- Usa la classe square-img per le immagini -->
-    <!-- Esempio per uno -->
-    <div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
+  <section class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+
+    <div class="glass card p-6 rounded-2xl shadow-2xl text-center">
       <img src="images/catalogo/abbigliamento/Arc'Teryx Beta AR.png" alt="Arc’Teryx Beta AR" class="w-full square-img rounded-xl mb-4">
       <h2 class="text-xl font-semibold mb-2">Arc’Teryx Beta AR</h2>
-      <p class="text-gray-300 text-sm mb-4">Guscio impermeabile e resistente, perfetto per affrontare le condizioni meteo più estreme in montagna.</p>
-      <a href="https://amzn.to/4f6WsY2" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
+      <p class="text-gray-300 text-sm mb-4">A waterproof and durable shell jacket, perfect for tackling the harshest mountain weather.</p>
+      <a href="https://amzn.to/4f6WsY2" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl transition">Shop on Amazon</a>
     </div>
     
-  <div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/abbigliamento/Arc'Teryx Cerium LT Hooddy.png" alt="Arc’Teryx Cerium LT Hoody" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Arc’Teryx Cerium LT Hoody</h2>
-  <p class="text-gray-300 text-sm mb-4">Piumino leggerissimo e caldo, perfetto come strato isolante per ogni avventura in quota.</p>
-  <a href="manutenzione.html" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <div class="glass card p-6 rounded-2xl shadow-2xl text-center">
+      <img src="images/catalogo/abbigliamento/Arc'Teryx Cerium LT Hooddy.png" alt="Arc’Teryx Cerium LT Hoody" class="w-full square-img rounded-xl mb-4">
+      <h2 class="text-xl font-semibold mb-2">Arc’Teryx Cerium LT Hoody</h2>
+      <p class="text-gray-300 text-sm mb-4">An ultralight, warm down jacket – the perfect insulating layer for any high-altitude adventure.</p>
+      <a href="manutenzione.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl transition">Shop on Amazon</a>
+    </div>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/abbigliamento/Peak Performance rider zip hood 2.png" alt="Peak Performance Rider Zip Hood" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Peak Performance Rider Zip Hood</h2>
-  <p class="text-gray-300 text-sm mb-4">Una felpa tecnica e confortevole, ideale per riscaldarsi dopo una giornata all’aria aperta.</p>
-  <a href="https://www.peakperformance.com/gb/product/m-rider-zip-hood-g79942.html" class="text-blue-400 underline hover:text-blue-300">Acquista su Peak Performance</a>
-</div>
+    <div class="glass card p-6 rounded-2xl shadow-2xl text-center">
+      <img src="images/catalogo/abbigliamento/Peak Performance rider zip hood 2.png" alt="Peak Performance Rider Zip Hood" class="w-full square-img rounded-xl mb-4">
+      <h2 class="text-xl font-semibold mb-2">Peak Performance Rider Zip Hood</h2>
+      <p class="text-gray-300 text-sm mb-4">A technical, comfortable hoodie – ideal for warming up after a long day outdoors.</p>
+      <a href="https://www.peakperformance.com/gb/product/m-rider-zip-hood-g79942.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl transition">Shop on Peak Performance</a>
+    </div>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/abbigliamento/smartwool t-shirt.png" alt="Maglietta Lana Merinos Smartwool" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Maglietta Lana Merinos (Smartwool)</h2>
-  <p class="text-gray-300 text-sm mb-4">Traspirante e antiodore, perfetta per camminate lunghe e attività outdoor in ogni stagione.</p>
-  <a href="manutenzione.hmtl" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <div class="glass card p-6 rounded-2xl shadow-2xl text-center">
+      <img src="images/catalogo/abbigliamento/smartwool t-shirt.png" alt="Merino Wool T-shirt Smartwool" class="w-full square-img rounded-xl mb-4">
+      <h2 class="text-xl font-semibold mb-2">Merino Wool T-shirt (Smartwool)</h2>
+      <p class="text-gray-300 text-sm mb-4">Breathable and odour-resistant, perfect for long hikes and year-round outdoor activities.</p>
+      <a href="manutenzione.hmtl" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl transition">Shop on Amazon</a>
+    </div>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/abbigliamento/arc'teryx gamma ar pants.png" alt="Gamma AR Pants" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Arc'Teryx Gamma AR Pants</h2>
-  <p class="text-gray-300 text-sm mb-4">Pantaloni tecnici softshell robusti e flessibili, ideali per escursioni alpine e attività dinamiche.</p>
-  <a href="https://amzn.to/3H4GwZD" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <div class="glass card p-6 rounded-2xl shadow-2xl text-center">
+      <img src="images/catalogo/abbigliamento/arc'teryx gamma ar pants.png" alt="Gamma AR Pants" class="w-full square-img rounded-xl mb-4">
+      <h2 class="text-xl font-semibold mb-2">Arc'Teryx Gamma AR Pants</h2>
+      <p class="text-gray-300 text-sm mb-4">Durable, flexible softshell trousers – perfect for alpine hikes and dynamic activities.</p>
+      <a href="https://amzn.to/3H4GwZD" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl transition">Shop on Amazon</a>
+    </div>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/abbigliamento/smartwool socks.png" alt="Smartwool Calze" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Smartwool Calze</h2>
-  <p class="text-gray-300 text-sm mb-4">Massimo comfort e controllo termico anche nelle uscite più fredde o lunghe. Non ne faccio a meno.</p>
-  <a href="manutenzione.html" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <div class="glass card p-6 rounded-2xl shadow-2xl text-center">
+      <img src="images/catalogo/abbigliamento/smartwool socks.png" alt="Smartwool Socks" class="w-full square-img rounded-xl mb-4">
+      <h2 class="text-xl font-semibold mb-2">Smartwool Socks</h2>
+      <p class="text-gray-300 text-sm mb-4">Maximum comfort and thermal control, even during cold or long outings – an essential piece of kit.</p>
+      <a href="manutenzione.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl transition">Shop on Amazon</a>
+    </div>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/abbigliamento/scarpa ribelle hd.png" alt="Scarpa Ribelle HD" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Scarpa Ribelle HD</h2>
-  <p class="text-gray-300 text-sm mb-4">Scarponi da alpinismo leggeri, precisi e impermeabili. Il mio riferimento per terreno tecnico.</p>
-  <a href="https://amzn.to/4o0T3OB" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
+    <div class="glass card p-6 rounded-2xl shadow-2xl text-center">
+      <img src="images/catalogo/abbigliamento/scarpa ribelle hd.png" alt="Scarpa Ribelle HD" class="w-full square-img rounded-xl mb-4">
+      <h2 class="text-xl font-semibold mb-2">Scarpa Ribelle HD</h2>
+      <p class="text-gray-300 text-sm mb-4">Lightweight, precise, waterproof alpine boots – my go-to for technical terrain.</p>
+      <a href="https://amzn.to/4o0T3OB" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl transition">Shop on Amazon</a>
+    </div>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/abbigliamento/Arc'teryx atom lt hoody.png" alt="Arc’Teryx Atom LT Hoody" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Arc’Teryx Atom LT Hoody</h2>
-  <p class="text-gray-300 text-sm mb-4">Perfetto come strato intermedio versatile per l’uso attivo: caldo, traspirante e resistente al vento.</p>
-  <a href="https://arcteryx.com/es/en/shop/mens/atom-hoody" class="text-blue-400 underline hover:text-blue-300">Acquista su Arc'Teryx.com</a>
-</div>
+    <div class="glass card p-6 rounded-2xl shadow-2xl text-center">
+      <img src="images/catalogo/abbigliamento/Arc'teryx atom lt hoody.png" alt="Arc’Teryx Atom LT Hoody" class="w-full square-img rounded-xl mb-4">
+      <h2 class="text-xl font-semibold mb-2">Arc’Teryx Atom LT Hoody</h2>
+      <p class="text-gray-300 text-sm mb-4">A versatile mid-layer for active use – warm, breathable, and wind-resistant.</p>
+      <a href="https://arcteryx.com/es/en/shop/mens/atom-hoody" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl transition">Shop on Arc'Teryx.com</a>
+    </div>
 
-<div class="bg-gray-800 p-6 rounded-2xl shadow-xl">
-  <img src="images/catalogo/abbigliamento/arc'teryx atom lt.png" alt="Acr’teryx Atom LT" class="w-full square-img rounded-xl mb-4">
-  <h2 class="text-xl font-semibold mb-2">Acr’teryx Atom LT</h2>
-  <p class="text-gray-300 text-sm mb-4">Uno dei migliori strati per attività intense in montagna. Leggero, compatto e termico.</p>
-  <a href="manutenzione.html" class="text-blue-400 underline hover:text-blue-300">Acquista su Amazon</a>
-</div>
-
-
+    <div class="glass card p-6 rounded-2xl shadow-2xl text-center">
+      <img src="images/catalogo/abbigliamento/arc'teryx atom lt.png" alt="Acr’teryx Atom LT" class="w-full square-img rounded-xl mb-4">
+      <h2 class="text-xl font-semibold mb-2">Acr’teryx Atom LT</h2>
+      <p class="text-gray-300 text-sm mb-4">One of the best layers for high-intensity mountain activities – lightweight, compact and warm.</p>
+      <a href="manutenzione.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl transition">Shop on Amazon</a>
+    </div>
 
   </section>
 
-  <!-- Pagina Precedente  -->
+  <!-- Navigation -->
   <div class="text-center my-12">
-    <a href="catalogo.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-xl">⬅ Pagina Precedenete</a>
+    <a href="catalogo.html" class="inline-block bg-white/10 hover:bg-white/20 text-white py-2 px-6 rounded-xl font-semibold">⬅ Previous Page</a>
   </div>
 
-  <!-- Torna alla Home -->
   <div class="text-center my-12">
-    <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-xl">⬅ Torna alla Home</a>
+    <a href="index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-xl font-semibold">⬅ Back to Home</a>
   </div>
 
   <!-- Footer -->
-  <footer class="text-center py-10 text-gray-500">
-    <p>&copy; <span id="year"></span> Tommaso Ruzzi. Tutti i diritti riservati.</p>
+  <footer class="text-center py-10 text-gray-400">
+    <p>&copy; <span id="year"></span> Tommaso Ruzzi. All rights reserved.</p>
   </footer>
 
   <script>
