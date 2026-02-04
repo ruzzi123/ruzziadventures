@@ -117,12 +117,13 @@
 
 <!-- Cards Section -->
 <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8" id="servizi">
+
   <!-- Social Media -->
   <div
     class="group glass card p-8 rounded-2xl reveal hover:bg-white/5 transition transform hover:-translate-y-1 hover:shadow-2xl cursor-pointer"
     data-href="https://www.instagram.com/ruzzi.adventures/"
   >
-    <div class="flex flex-col items-center text-center">
+    <div class="flex flex-col items-center text-center h-full">
       <div class="w-14 h-14 rounded-full bg-blue-600 bg-opacity-20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
         <span class="text-2xl">📸</span>
       </div>
@@ -132,7 +133,7 @@
       </p>
 
       <!-- Icon links -->
-      <div class="flex gap-4 justify-center">
+      <div class="flex gap-4 justify-center mt-auto">
         <a href="https://www.instagram.com/ruzzi.adventures/" target="_blank" rel="noopener nofollow" aria-label="Instagram">
           <img src="/icons/instagram.svg" alt="Instagram" class="w-7 h-7 hover-scale">
         </a>
@@ -145,55 +146,60 @@
       </div>
     </div>
   </div>
-</section>
 
-<!-- Make the whole card clickable (but let icon links work normally) -->
-<script>
-  document.addEventListener('click', (e) => {
-    const card = e.target.closest('[data-href]');
-    if (!card) return;
-    // If the click was on a link inside the card, let that link handle it.
-    if (e.target.closest('a')) return;
-    const url = card.getAttribute('data-href');
-    window.open(url, '_blank', 'noopener');
-  });
-</script>
-
-
-  <!-- Recommended Gear -->
-  <a href="catalogo.html"
-     class="group glass card p-8 rounded-2xl reveal block hover:bg-white/5 transition transform hover:-translate-y-1 hover:shadow-2xl">
-    <div class="flex flex-col items-center text-center">
+  <!-- Recommended Gear (same style as Social Media) -->
+  <div
+    class="group glass card p-8 rounded-2xl reveal hover:bg-white/5 transition transform hover:-translate-y-1 hover:shadow-2xl cursor-pointer"
+    data-href="catalogo.html"
+  >
+    <div class="flex flex-col items-center text-center h-full">
       <div class="w-14 h-14 rounded-full bg-green-500 bg-opacity-20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
         <span class="text-2xl">🎒</span>
       </div>
       <h3 class="text-2xl font-semibold mb-3">Recommended Gear</h3>
-      <p class="text-gray-300 mb-4">
+      <p class="text-gray-300 mb-6">
         Explore the gear I actually use — tested on real adventures and linked with trusted partners.
       </p>
-      <span class="inline-block mt-auto bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl font-semibold transition">
+
+      <span class="mt-auto inline-flex items-center justify-center bg-blue-600 group-hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl font-semibold transition">
         Browse the catalogue
       </span>
     </div>
-  </a>
+  </div>
 
-  <!-- Work With Me -->
-  <a href="collabora-con-me"
-     class="group glass card p-8 rounded-2xl reveal block hover:bg-white/5 transition transform hover:-translate-y-1 hover:shadow-2xl">
-    <div class="flex flex-col items-center text-center">
+  <!-- Work With Me (same style as Social Media) -->
+  <div
+    class="group glass card p-8 rounded-2xl reveal hover:bg-white/5 transition transform hover:-translate-y-1 hover:shadow-2xl cursor-pointer"
+    data-href="collabora-con-me"
+  >
+    <div class="flex flex-col items-center text-center h-full">
       <div class="w-14 h-14 rounded-full bg-purple-500 bg-opacity-20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
         <span class="text-2xl">🤝</span>
       </div>
       <h3 class="text-2xl font-semibold mb-3">Work With Me</h3>
-      <p class="text-gray-300 mb-4">
-        Are you a brand or company? Discover the services I offer to create authentic and inspiring collaborations.
+      <p class="text-gray-300 mb-6">
+        Are you a brand or company? Discover the services I offer for authentic, high-impact collaborations.
       </p>
-      <span class="inline-block mt-auto bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl font-semibold transition">
+
+      <span class="mt-auto inline-flex items-center justify-center bg-blue-600 group-hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl font-semibold transition">
         Find out more
       </span>
     </div>
-  </a>
+  </div>
+
 </section>
+
+<!-- Make the whole card clickable (but let inner links work normally) -->
+<script>
+  document.addEventListener('click', (e) => {
+    const card = e.target.closest('[data-href]');
+    if (!card) return;
+    if (e.target.closest('a')) return; // allow inner links (social icons)
+    const url = card.getAttribute('data-href');
+    window.location.href = url; // same tab for internal pages
+  });
+</script>
+
 
   
   <!-- YouTube Section -->
